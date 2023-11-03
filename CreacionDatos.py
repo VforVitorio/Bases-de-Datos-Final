@@ -15,12 +15,12 @@ c = conn.cursor()
 # Creacion de la tablas
 
 # Creacion tabla departure
-c.execute(''' 
-          CREATE TABLE IF NOT EXISTS Departures (
-          id_departure INTEGER PRIMARY KEY, 
-          departure_code VARCHAR(255)
-          )
-            ''')
+c.execute('''
+    CREATE TABLE IF NOT EXISTS Departures (
+        id_departure INTEGER AUTO_INCREMENT PRIMARY KEY,
+        departure_code VARCHAR(255)
+    )
+''')
 # Creacion de la tabla iatacodes
 c.execute(''' 
           CREATE TABLE IF NOT EXISTS IataCodes (
@@ -61,7 +61,7 @@ c.execute('''
 c.execute(''' 
           CREATE TABLE IF NOT EXISTS Flights (
           id_flight INTEGER PRIMARY KEY, 
-          id_departure INTEGER,
+          id_departure INTEGER DEFAULT NULL,
           id_iata INTEGER,
           id_name INTEGER,
           id_air INTEGER,
@@ -107,35 +107,34 @@ while counter < 100:  # Por ejemplo, detenemos el bucle después de 100 iteracio
 
     try:
         # Insertar datos en las tablas
+        # Insertar datos en las tablas relacionadas antes de la tabla Flights
         c.execute("INSERT INTO Departures (departure_code) VALUES (%s)",
                   (plane['Departure'],))
+        id_departure = c.lastrowid  # Obtener el ID asignado automáticamente
+
         c.execute("INSERT INTO IataCodes (iataCode) VALUES (%s)",
                   (plane['iataCode'],))
+        id_iata = c.lastrowid
+
         c.execute("INSERT INTO names (name) VALUES (%s)", (plane['name'],))
+        id_name = c.lastrowid
+
         c.execute("INSERT INTO Airlines (airline) VALUES (%s)",
                   (plane['Airline'],))
+        id_air = c.lastrowid
+
         c.execute("INSERT INTO Destinations (destination) VALUES (%s)",
                   (plane['Destination'],))
+        id_des = c.lastrowid
+
         c.execute("INSERT INTO FlightStatuses (flightStatus) VALUES (%s)",
                   (plane['flightStatus'],))
-
-        # Obtener los IDs de las filas que acabamos de insertar
-        id_departure = c.execute(
-            "SELECT id_departure FROM Departures WHERE departure_code = %s", (plane['Departure'],)).fetchone()[0]
-        id_iata = c.execute(
-            "SELECT id_iata FROM IataCodes WHERE iataCode = %s", (plane['iataCode'],)).fetchone()[0]
-        id_name = c.execute(
-            "SELECT id_name FROM names WHERE name = %s", (plane['name'],)).fetchone()[0]
-        id_air = c.execute(
-            "SELECT id_air FROM Airlines WHERE airline = %s", (plane['Airline'],)).fetchone()[0]
-        id_des = c.execute(
-            "SELECT id_des FROM Destinations WHERE destination = %s", (plane['Destination'],)).fetchone()[0]
-        id_status = c.execute(
-            "SELECT id_status FROM FlightStatuses WHERE flightStatus = %s", (plane['flightStatus'],)).fetchone()[0]
+        id_status = c.lastrowid
 
         # Insertar una nueva fila en la tabla Flights
         c.execute("INSERT INTO Flights (id_departure, id_iata, id_name, id_air, id_des, id_status) VALUES (%s, %s, %s, %s, %s, %s)",
                   (id_departure, id_iata, id_name, id_air, id_des, id_status))
+
     except mysql.connector.Error as e:
         print(
             f"Se produjo un error al insertar datos en la base de datos: {e}")
