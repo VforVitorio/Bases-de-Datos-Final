@@ -1,0 +1,696 @@
+{
+  "airports": [
+    {
+      "departure": "LEMD",
+      "iataCode": "MAD",
+      "name": "Aeropuerto Adolfo Suarez Madrid Barajas ",
+      "routes": [
+        {
+          "airline": "Vueling",
+          "destination": "LEBL",
+          "routeId": "VLG456"
+        },
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEPA",
+          "routeId": "AEE789"
+        },
+        {
+          "airline": "Binter Canarias",
+          "destination": "LPA",
+          "routeId": "BIN234"
+        }
+      ]
+    },
+    {
+      "departure": "LEBL",
+      "iataCode": "BCN",
+      "name": "Aeropuerto de Barcelona-El Prat",
+      "routes": [
+        {
+          "airline": "Iberia Regional",
+          "destination": "LEMD",
+          "routeId": "IBE123"
+        },
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEPA",
+          "routeId": "AEE456"
+        },
+        {
+          "airline": "Vueling",
+          "destination": "LEVC",
+          "routeId": "VLG789"
+        }
+      ]
+    },
+    {
+      "departure": "LEPA",
+      "iataCode": "PMI",
+      "name": "Aeropuerto de Palma de Mallorca",
+      "routes": [
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEMD",
+          "routeId": "AEE123"
+        },
+        {
+          "airline": "Binter Canarias",
+          "destination": "LEAL",
+          "routeId": "BIN456"
+        },
+        {
+          "airline": "Vueling",
+          "destination": "LEBL",
+          "routeId": "VLG789"
+        }
+      ]
+    },
+    {
+      "departure": "LEMG",
+      "iataCode": "AGP",
+      "name": "Aeropuerto de Malaga-Costa del Sol",
+      "routes": [
+        {
+          "airline": "Iberia Regional",
+          "destination": "LEMD",
+          "routeId": "IBE456"
+        },
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEPA",
+          "routeId": "AEE789"
+        },
+        {
+          "airline": "Binter Canarias",
+          "destination": "LPA",
+          "routeId": "BIN234"
+        }
+      ]
+    },
+    {
+      "departure": "LEAL",
+      "iataCode": "ALC",
+      "name": "Aeropuerto de Alicante-Elche",
+      "routes": [
+        {
+          "airline": "Iberia Regional",
+          "destination": "LEMD",
+          "routeId": "IBE123"
+        },
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEPA",
+          "routeId": "AEE456"
+        },
+        {
+          "airline": "Volotea",
+          "destination": "LEVC",
+          "routeId": "VOL789"
+        }
+      ]
+    },
+    {
+      "departure": "LEVC",
+      "iataCode": "VLC",
+      "name": "Aeropuerto de Valencia",
+      "routes": [
+        {
+          "airline": "Iberia Regional",
+          "destination": "LEMD",
+          "routeId": "IBE234"
+        },
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEPA",
+          "routeId": "AEE567"
+        },
+        {
+          "airline": "Volotea",
+          "destination": "LEBL",
+          "routeId": "VOL123"
+        }
+      ]
+    },
+    {
+      "departure": "LEZL",
+      "iataCode": "SVQ",
+      "name": "Aeropuerto de Sevilla",
+      "routes": [
+        {
+          "airline": "Iberia Regional",
+          "destination": "LEMD",
+          "routeId": "IBE345"
+        },
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEPA",
+          "routeId": "AEE678"
+        },
+        {
+          "airline": "Binter Canarias",
+          "destination": "LPA",
+          "routeId": "BIN456"
+        }
+      ]
+    },
+    {
+      "departure": "LEBB",
+      "iataCode": "BIO",
+      "name": "Aeropuerto de Bilbao",
+      "routes": [
+        {
+          "airline": "Vueling",
+          "destination": "LEMD",
+          "routeId": "VLG789"
+        },
+        {
+          "airline": "Volotea",
+          "destination": "LEVC",
+          "routeId": "VOL234"
+        },
+        {
+          "airline": "Air-Balear",
+          "destination": "LEBL",
+          "routeId": "AIR567"
+        }
+      ]
+    },
+    {
+      "departure": "GCLP",
+      "iataCode": "LPA",
+      "name": "Aeropuerto de Gran Canaria",
+      "routes": [
+        {
+          "airline": "Iberia Regional",
+          "destination": "LEMD",
+          "routeId": "IBE456"
+        },
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEPA",
+          "routeId": "AEE123"
+        },
+        {
+          "airline": "Binter Canarias",
+          "destination": "LEAL",
+          "routeId": "BIN789"
+        }
+      ]
+    },
+    {
+      "departure": "GCXO",
+      "iataCode": "TFN",
+      "name": "Aeropuerto de Tenerife Norte",
+      "routes": [
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEMD",
+          "routeId": "AEE234"
+        },
+        {
+          "airline": "Vueling",
+          "destination": "LEVC",
+          "routeId": "VLG567"
+        },
+        {
+          "airline": "Air-Balear",
+          "destination": "LEBL",
+          "routeId": "AIR123"
+        }
+      ]
+    },
+    {
+      "departure": "LEIB",
+      "iataCode": "IBZ",
+      "name": "Aeropuerto de Ibiza",
+      "routes": [
+        {
+          "airline": "Iberia Regional",
+          "destination": "LEMD",
+          "routeId": "IBE789"
+        },
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEPA",
+          "routeId": "AEE890"
+        },
+        {
+          "airline": "Binter Canarias",
+          "destination": "LEAL",
+          "routeId": "BIN890"
+        }
+      ]
+    },
+    {
+      "departure": "LEMH",
+      "iataCode": "MAH",
+      "name": "Aeropuerto de Menorca",
+      "routes": [
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEMD",
+          "routeId": "AEE567"
+        },
+        {
+          "airline": "Vueling",
+          "destination": "LEVC",
+          "routeId": "VLG234"
+        },
+        {
+          "airline": "Air-Balear",
+          "destination": "LEBL",
+          "routeId": "AIR890"
+        }
+      ]
+    },
+    {
+      "departure": "LEST",
+      "iataCode": "SCQ",
+      "name": "Aeropuerto de Santiago de Compostela",
+      "routes": [
+        {
+          "airline": "Vueling",
+          "destination": "LEBL",
+          "routeId": "VLG345"
+        },
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEPA",
+          "routeId": "AEE678"
+        },
+        {
+          "airline": "Vueling",
+          "destination": "LEVC",
+          "routeId": "VLG567"
+        }
+      ]
+    },
+    {
+      "departure": "LEXV",
+      "iataCode": "VLL",
+      "name": "Aeropuerto de Valladolid",
+      "routes": [
+        {
+          "airline": "Iberia Regional",
+          "destination": "LEMD",
+          "routeId": "IBE456"
+        },
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEPA",
+          "routeId": "AEE345"
+        },
+        {
+          "airline": "Binter Canarias",
+          "destination": "LEAL",
+          "routeId": "BIN567"
+        }
+      ]
+    },
+    {
+      "departure": "LECO",
+      "iataCode": "LCG",
+      "name": "Aeropuerto de A Coruña",
+      "routes": [
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEBL",
+          "routeId": "AEE123"
+        },
+        {
+          "airline": "Vueling",
+          "destination": "LEPA",
+          "routeId": "VLG456"
+        },
+        {
+          "airline": "Air-Balear",
+          "destination": "LEIB",
+          "routeId": "ABA789"
+        }
+      ]
+    },
+    {
+      "departure": "LEGR",
+      "iataCode": "GRX",
+      "name": "Aeropuerto de Granada-Jaén",
+      "routes": [
+        {
+          "airline": "Iberia Regional",
+          "destination": "LEBL",
+          "routeId": "IRE123"
+        },
+        {
+          "airline": "Air Europa Express",
+          "destination": "LESA",
+          "routeId": "AEE456"
+        },
+        {
+          "airline": "Vueling",
+          "destination": "LEXJ",
+          "routeId": "VLG7890"
+        }
+      ]
+    },
+    {
+      "departure": "LEGE",
+      "iataCode": "GRO",
+      "name": "Aeropuerto de Gerona-Costa Brava",
+      "routes": [
+        {
+          "airline": "Iberia Regional",
+          "destination": "LEMD",
+          "routeId": "IRE123"
+        },
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEBL",
+          "routeId": "AEE4567"
+        },
+        {
+          "airline": "Binter Canarias",
+          "destination": "LEZL",
+          "routeId": "BIN890"
+        }
+      ]
+    },
+    {
+      "departure": "LEAM",
+      "iataCode": "LEI",
+      "name": "Aeropuerto de Almería",
+      "routes": [
+        {
+          "airline": "Air Europa Express",
+          "destination": "GCXO",
+          "routeId": "AEE1234"
+        },
+        {
+          "airline": "Vueling",
+          "destination": "LEMD",
+          "routeId": "VLG567"
+        },
+        {
+          "airline": "Air-Balear",
+          "destination": "LEST",
+          "routeId": "ABA890"
+        }
+      ]
+    },
+    {
+      "departure": "LEMI",
+      "iataCode": "MJV",
+      "name": "Aeropuerto de Murcia-San Javier",
+      "routes": [
+        {
+          "airline": "Iberia Regional",
+          "destination": "LEJR",
+          "routeId": "IRE123"
+        },
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEBZ",
+          "routeId": "AEE456"
+        },
+        {
+          "airline": "Vueling",
+          "destination": "LEJR",
+          "routeId": "VLG789"
+        }
+      ]
+    },
+    {
+      "departure": "LESO",
+      "iataCode": "EAS",
+      "name": "Aeropuerto de San Sebastian",
+      "routes": [
+        {
+          "airline": "Iberia Regional",
+          "destination": "LEBL",
+          "routeId": "IRE123"
+        },
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEMD",
+          "routeId": "AEE4567"
+        },
+        {
+          "airline": "Binter Canarias",
+          "destination": "GCXO",
+          "routeId": "BIN890"
+        }
+      ]
+    },
+    {
+      "departure": "LEPP",
+      "iataCode": "PNA",
+      "name": "Aeropuerto de Pamplona",
+      "routes": [
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEMI",
+          "routeId": "AEE1234"
+        },
+        {
+          "airline": "Vueling",
+          "destination": "LEBZ",
+          "routeId": "VLG567"
+        },
+        {
+          "airline": "Air-Balear",
+          "destination": "LEJR",
+          "routeId": "ABA890"
+        }
+      ]
+    },
+    {
+      "departure": "LEJR",
+      "iataCode": "XRY",
+      "name": "Aeropuerto de Jerez",
+      "routes": [
+        {
+          "airline": "Iberia Regional",
+          "destination": "LEAS",
+          "routeId": "IRE123"
+        },
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEXJ",
+          "routeId": "AEE456"
+        },
+        {
+          "airline": "Vueling",
+          "destination": "LEBL",
+          "routeId": "VLG7890"
+        }
+      ]
+    },
+    {
+      "departure": "LEAS",
+      "iataCode": "OVD",
+      "name": "Aeropuerto de Asturias",
+      "routes": [
+        {
+          "airline": "Iberia Regional",
+          "destination": "LEBL",
+
+          "routeId": "IRE123"
+        },
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEMD",
+
+          "routeId": "AEE456"
+        },
+        {
+          "airline": "Binter Canarias",
+          "destination": "LEVC",
+          "routeId": "BIN789"
+        }
+      ]
+    },
+    {
+      "departure": "LERS",
+      "iataCode": "REU",
+      "name": "Aeropuerto de Reus",
+      "routes": [
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEVC",
+          "routeId": "AEE1234"
+        },
+        {
+          "airline": "Vueling",
+          "destination": "LEAS",
+          "routeId": "VLG567"
+        },
+        {
+          "airline": "Air-Balear",
+          "destination": "LEBZ",
+          "routeId": "ABA890"
+        }
+      ]
+    },
+    {
+      "departure": "LEZG",
+      "iataCode": "ZAZ",
+      "name": "Aeropuerto de Zaragoza",
+      "routes": [
+        {
+          "airline": "Iberia Regional",
+          "destination": "GCXO",
+          "routeId": "IRE123"
+        },
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEVC",
+          "routeId": "AEE4567"
+        },
+        {
+          "airline": "Vueling",
+          "destination": "LEMD",
+          "routeId": "VLG890"
+        }
+      ]
+    },
+    {
+      "departure": "LEDA",
+      "iataCode": "ILD",
+      "name": "Aeropuerto de Lleida-Alguaire",
+      "routes": [
+        {
+          "airline": "Iberia Regional",
+          "destination": "LEBL",
+
+          "routeId": "IRE123"
+        },
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEIB",
+
+          "routeId": "AEE456"
+        },
+        {
+          "airline": "Binter Canarias",
+          "destination": "LEJR",
+          "routeId": "BIN7890"
+        }
+      ]
+    },
+    {
+      "departure": "GEML",
+      "iataCode": "MLN",
+      "name": "Aeropuerto de Melilla",
+      "routes": [
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEMD",
+          "routeId": "AEE123"
+        },
+        {
+          "airline": "Vueling",
+          "destination": "LEBL",
+          "routeId": "VLG456"
+        },
+        {
+          "airline": "Air-Balear",
+          "destination": "GCXO",
+          "routeId": "ABA789"
+        }
+      ]
+    },
+    {
+      "departure": "LEBZ",
+      "iataCode": "BJZ",
+      "name": "Aeropuerto de Badajoz",
+      "routes": [
+        {
+          "airline": "Iberia Regional",
+          "destination": "LEJR",
+          "routeId": "IRE1234"
+        },
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEVC",
+          "routeId": "AEE567"
+        },
+        {
+          "airline": "Binter Canarias",
+          "destination": "LEMD",
+          "routeId": "BIN890"
+        }
+      ]
+    },
+    {
+      "departure": "LEXJ",
+      "iataCode": "SDR",
+      "name": "Aeropuerto de Santander",
+      "routes": [
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEMD",
+          "routeId": "AEE12345"
+        },
+        {
+          "airline": "Vueling",
+          "destination": "LEBL",
+          "routeId": "VLG678"
+        },
+        {
+          "airline": "Air-Balear",
+          "destination": "LEPA",
+          "routeId": "ABA8900"
+        }
+      ]
+    },
+    {
+      "departure": "LEBG",
+      "iataCode": "RGS",
+      "name": "Aeropuerto de Burgos",
+      "routes": [
+        {
+          "airline": "Iberia Regional",
+          "destination": "LEMD",
+          "routeId": "IRE123"
+          
+        },
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEPA",
+          "routeId": "AEE456"
+         
+        },
+        {
+          "airline": "Binter Canarias",
+          "destination": "LEAL",
+          "routeId": "BIN789"
+         
+        }
+      ]
+    },
+    {
+      "departure": "LESA",
+      "iataCode": "SLM",
+      "name": "Aeropuerto de Salamanca",
+      "routes": [
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEMD",
+          "routeId": "AEE1234"
+          
+        },
+        {
+          "airline": "Vueling",
+          "destination": "LEVC",
+          "routeId": "VLG567"
+          
+        },
+        {
+          "airline": "Air-Balear",
+          "destination": "LEBL",
+          "routeId": "ABA890"
+          
+        }
+      ]
+    }     
+  ]
+}
