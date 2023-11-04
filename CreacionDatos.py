@@ -56,6 +56,14 @@ c.execute('''
           flightStatus VARCHAR(255)
           )
             ''')
+# Creacion de la tabla routeIds
+c.execute(''' 
+          CREATE TABLE IF NOT EXISTS routeIds (
+          id_route INTEGER AUTO_INCREMENT PRIMARY KEY, 
+          routeId VARCHAR(255)
+          )
+            ''')
+
 
 # Creacion de la tabla Flights
 c.execute('''
@@ -67,15 +75,16 @@ c.execute('''
         id_air INTEGER DEFAULT NULL,
         id_destination INTEGER DEFAULT NULL,
         id_status INTEGER DEFAULT NULL,
+        id_route INTEGER DEFAULT NULL,
         FOREIGN KEY (id_departure) REFERENCES Departures (id_departure),
         FOREIGN KEY (id_iata) REFERENCES IataCodes (id_iata),
         FOREIGN KEY (id_name) REFERENCES names (id_name),
         FOREIGN KEY (id_air) REFERENCES Airlines (id_air),
         FOREIGN KEY (id_destination) REFERENCES Destinations (id_destination),
-        FOREIGN KEY (id_status) REFERENCES FlightStatuses (id_status)
+        FOREIGN KEY (id_status) REFERENCES FlightStatuses (id_status),
+        FOREIGN KEY (id_route) REFERENCES routeIds (id_route)
     )
 ''')
-
 flightStatus = ["The flight is on time",
                 "The flight is delayed", "The flight is cancelled"]
 prop = [0.85, 0.10, 0.05]
@@ -131,9 +140,12 @@ while counter < 100:  # Por ejemplo, detenemos el bucle después de 100 iteracio
                   (plane['flightStatus'],))
         id_status = c.lastrowid
 
+        c.execute("INSERT INTO routeIds (routeId) VALUES (%s)", (plane['Id'],))
+        id_route = c.lastrowid
+
         # Insertar una nueva fila en la tabla Flights
-        c.execute("INSERT INTO Flights (id_departure, id_iata, id_name, id_air, id_destination, id_status) VALUES (%s, %s, %s, %s, %s, %s)",
-                  (id_departure, id_iata, id_name, id_air, id_destination, id_status))
+        c.execute("INSERT INTO Flights (id_departure, id_iata, id_name, id_air, id_destination, id_status, id_route) VALUES (%s, %s, %s, %s, %s, %s, %s)",
+                  (id_departure, id_iata, id_name, id_air, id_destination, id_status, id_route))
 
     except mysql.connector.Error as e:
         print(
