@@ -22,59 +22,59 @@ c.execute('''
     )
 ''')
 # Creacion de la tabla iatacodes
-c.execute(''' 
-          CREATE TABLE IF NOT EXISTS IataCodes (
-          id_iata INTEGER PRIMARY KEY, 
-          iataCode VARCHAR(255)
-          )
-            ''')
+c.execute('''
+    CREATE TABLE IF NOT EXISTS IataCodes (
+        id_iata INTEGER AUTO_INCREMENT PRIMARY KEY, 
+        iataCode VARCHAR(255)
+    )
+''')
 # Creacion de la tabla names
 c.execute(''' 
           CREATE TABLE IF NOT EXISTS names (
-          id_name INTEGER PRIMARY KEY, 
+          id_name INTEGER AUTO_INCREMENT PRIMARY KEY, 
           name VARCHAR(255)
           )
             ''')
 # Creacion de la tabla airlines
 c.execute(''' 
           CREATE TABLE IF NOT EXISTS Airlines (
-          id_air INTEGER PRIMARY KEY, 
+          id_air INTEGER AUTO_INCREMENT PRIMARY KEY, 
           airline VARCHAR(255)
           )
             ''')
 # Creacion de la tabla destinations
 c.execute(''' 
           CREATE TABLE IF NOT EXISTS Destinations (
-          id_des INTEGER PRIMARY KEY, 
+          id_destination INTEGER AUTO_INCREMENT PRIMARY KEY, 
           destination VARCHAR(255)
           )
             ''')
 # Creacion de la tabla FlightStatus
 c.execute(''' 
           CREATE TABLE IF NOT EXISTS FlightStatuses (
-          id_status INTEGER PRIMARY KEY, 
+          id_status INTEGER AUTO_INCREMENT PRIMARY KEY, 
           flightStatus VARCHAR(255)
           )
             ''')
 
 # Creacion de la tabla Flights
-c.execute(''' 
-          CREATE TABLE IF NOT EXISTS Flights (
-          id_flight INTEGER PRIMARY KEY, 
-          id_departure INTEGER DEFAULT NULL,
-          id_iata INTEGER,
-          id_name INTEGER,
-          id_air INTEGER,
-          id_des INTEGER,
-          id_status INTEGER,
-          FOREIGN KEY (id_departure) REFERENCES Departures (id_departure),
-          FOREIGN KEY (id_iata) REFERENCES IataCodes (id_iata),
-          FOREIGN KEY (id_name) REFERENCES names (id_name),
-          FOREIGN KEY (id_air) REFERENCES Airlines (id_air),
-          FOREIGN KEY (id_des) REFERENCES Destinations (id_des),
-          FOREIGN KEY (id_status) REFERENCES FlightStatuses (id_status)
-          )
-            ''')
+c.execute('''
+    CREATE TABLE IF NOT EXISTS Flights (
+        id_flight INTEGER AUTO_INCREMENT PRIMARY KEY,
+        id_departure INTEGER DEFAULT NULL,
+        id_iata INTEGER DEFAULT NULL,
+        id_name INTEGER DEFAULT NULL,
+        id_air INTEGER DEFAULT NULL,
+        id_destination INTEGER DEFAULT NULL,
+        id_status INTEGER DEFAULT NULL,
+        FOREIGN KEY (id_departure) REFERENCES Departures (id_departure),
+        FOREIGN KEY (id_iata) REFERENCES IataCodes (id_iata),
+        FOREIGN KEY (id_name) REFERENCES names (id_name),
+        FOREIGN KEY (id_air) REFERENCES Airlines (id_air),
+        FOREIGN KEY (id_destination) REFERENCES Destinations (id_destination),
+        FOREIGN KEY (id_status) REFERENCES FlightStatuses (id_status)
+    )
+''')
 
 flightStatus = ["The flight is on time",
                 "The flight is delayed", "The flight is cancelled"]
@@ -102,8 +102,8 @@ while counter < 100:  # Por ejemplo, detenemos el bucle después de 100 iteracio
 
     print(plane)
 
-    # Espera 10 segundos antes de repetir el proceso
-    time.sleep(10)
+    # Espera 5 segundos antes de repetir el proceso
+    time.sleep(5)
 
     try:
         # Insertar datos en las tablas
@@ -125,15 +125,15 @@ while counter < 100:  # Por ejemplo, detenemos el bucle después de 100 iteracio
 
         c.execute("INSERT INTO Destinations (destination) VALUES (%s)",
                   (plane['Destination'],))
-        id_des = c.lastrowid
+        id_destination = c.lastrowid
 
         c.execute("INSERT INTO FlightStatuses (flightStatus) VALUES (%s)",
                   (plane['flightStatus'],))
         id_status = c.lastrowid
 
         # Insertar una nueva fila en la tabla Flights
-        c.execute("INSERT INTO Flights (id_departure, id_iata, id_name, id_air, id_des, id_status) VALUES (%s, %s, %s, %s, %s, %s)",
-                  (id_departure, id_iata, id_name, id_air, id_des, id_status))
+        c.execute("INSERT INTO Flights (id_departure, id_iata, id_name, id_air, id_destination, id_status) VALUES (%s, %s, %s, %s, %s, %s)",
+                  (id_departure, id_iata, id_name, id_air, id_destination, id_status))
 
     except mysql.connector.Error as e:
         print(
