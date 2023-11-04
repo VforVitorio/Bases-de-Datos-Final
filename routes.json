@@ -3,7 +3,7 @@
     {
       "departure": "LEMD",
       "iataCode": "MAD",
-      "name": "Aeropuerto Adolfo Suárez Madrid Barajas ",
+      "name": "Aeropuerto Adolfo Suarez Madrid Barajas ",
       "routes": [
         {
           "airline": "Vueling",
@@ -69,7 +69,7 @@
     {
       "departure": "LEMG",
       "iataCode": "AGP",
-      "name": "Aeropuerto de Málaga-Costa del Sol",
+      "name": "Aeropuerto de Malaga-Costa del Sol",
       "routes": [
         {
           "airline": "Iberia Regional",
@@ -421,7 +421,7 @@
     {
       "departure": "LESO",
       "iataCode": "EAS",
-      "name": "Aeropuerto de San Sebastián",
+      "name": "Aeropuerto de San Sebastian",
       "routes": [
         {
           "airline": "Iberia Regional",
