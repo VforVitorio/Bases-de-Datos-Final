@@ -2,6 +2,10 @@ import json
 import random
 import time
 import mysql.connector
+import networkx as nx
+import matplotlib.pyplot as plt
+import pydot
+from networkx.drawing.nx_pydot import graphviz_layout
 
 # Conexion a la base de datos
 conn = mysql.connector.connect(
@@ -91,6 +95,7 @@ prop = [0.85, 0.10, 0.05]
 
 with open('routes.json', 'r') as route_file:
     route = json.load(route_file)
+
 
 # Añadimos un contador para limitar el número de iteraciones del bucle
 counter = 0
