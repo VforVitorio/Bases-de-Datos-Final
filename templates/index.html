@@ -1,0 +1,8 @@
+{% extends 'base.html' %} {% block head %}
+<!-- Aquí puedes poner código específico para el head de index.html -->
+{% endblock %} {% block body %}
+<!-- Aquí puedes poner código específico para el body de index.html -->
+{% for vuelo in vuelos %}
+<p>{{ vuelo.id_flight }}</p>
+<!-- Mostrar más información del vuelo... -->
+{% endfor %} {% endblock %}
