@@ -1,4 +1,13 @@
 body {
-    margin: 0;
-    font-family: sans-serif;
+    background-color: lightblue;
+}
+
+h1 {
+    color: navy;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    color: darkgreen;
 }

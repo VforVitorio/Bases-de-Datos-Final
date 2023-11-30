@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block head %}
+<title>Consulta de Información de Avión</title>
+{% endblock %} {% block body %}
+<h1>Consulta de Información de Avión</h1>
+<form method="GET" action="{{ url_for('buscar_avion') }}">
+  <label for="route_id">Introduce el Route ID:</label>
+  <input type="text" name="route_id" id="route_id" required />
+  <button type="submit">Buscar</button>
+</form>
+{% if vuelo %}
+<div>
+  <p>Route ID: {{ vuelo[6].routeId }}</p>
+  <p>Departure Code: {{ vuelo[1].departure_code }}</p>
+  <p>IATA Code: {{ vuelo[2].iataCode }}</p>
+  <p>Airline: {{ vuelo[3].airline }}</p>
+  <p>Destination: {{ vuelo[4].destination }}</p>
+  <p>Flight Status: {{ vuelo[5].flightStatus }}</p>
+  <p>Name: {{ vuelo[7].name }}</p>
+</div>
+{% else %}
+<p>No se encontró ningún vuelo con el Route ID proporcionado.</p>
+{% endif %} {% endblock %}

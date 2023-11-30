@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 
 
@@ -80,13 +80,14 @@ class Flights(db.Model):
 # Paso 5: Crear una ruta para mostrar los vuelos y de inicio
 
 
-@app.route('/')
-def inicio():
-    # Obtener todos los vuelos de la base de datos
-    vuelos = Flights.query.all()
-    # Renderizar index.html y pasar los vuelos a la plantilla
-
-    return render_template('index.html', vuelos=vuelos)
+@app.route('/', methods=['GET'])
+def buscar_avion():
+    route_id = request.args.get('route_id')
+    vuelo = None
+    if route_id is not None:
+        vuelo = db.session.query(Flights, Departures, IataCodes, Airlines, Destinations, FlightStatuses, routeIds, names).join(Departures, Flights.id_departure == Departures.id_departure).join(IataCodes, Flights.id_iata == IataCodes.id_iata).join(Airlines, Flights.id_air == Airlines.id_air).join(
+            Destinations, Flights.id_destination == Destinations.id_destination).join(FlightStatuses, Flights.id_status == FlightStatuses.id_status).join(routeIds, Flights.id_route == routeIds.id_route).join(names, Flights.id_name == names.id_name).filter(routeIds.routeId == route_id).first()
+    return render_template('SeleccionVuelos.html', vuelo=vuelo)
 
 
 if __name__ == "__main__":
