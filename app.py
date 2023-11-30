@@ -77,10 +77,13 @@ class Flights(db.Model):
         'routeIds', backref=db.backref('flights', lazy=True))
     name = db.relationship('names', backref=db.backref('flights', lazy=True))
 
-# Paso 5: Crear una ruta para mostrar los vuelos y de inicio
+# Definir ruta de inicio con el menu, luego cambiar la ruta de buscar avion a otra
+# Tienes que crear otro base html tipo base_menu y linkearlo con el html menu.html
+# Luego creas otro css llamalo main_menu por ejemplo y lo linkeaas a base_menu
 
 
 @app.route('/', methods=['GET'])
+# La ruta está definida como el inicio y esto hay que cambiarlo para que el menu sea el inicio
 def buscar_avion():
     route_id = request.args.get('route_id')
     error = None
