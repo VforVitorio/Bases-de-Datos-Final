@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 
 
@@ -83,11 +83,19 @@ class Flights(db.Model):
 @app.route('/', methods=['GET'])
 def buscar_avion():
     route_id = request.args.get('route_id')
+    error = None
     vuelo = None
     if route_id is not None:
         vuelo = db.session.query(Flights, Departures, IataCodes, Airlines, Destinations, FlightStatuses, routeIds, names).join(Departures, Flights.id_departure == Departures.id_departure).join(IataCodes, Flights.id_iata == IataCodes.id_iata).join(Airlines, Flights.id_air == Airlines.id_air).join(
             Destinations, Flights.id_destination == Destinations.id_destination).join(FlightStatuses, Flights.id_status == FlightStatuses.id_status).join(routeIds, Flights.id_route == routeIds.id_route).join(names, Flights.id_name == names.id_name).filter(routeIds.routeId == route_id).first()
-    return render_template('SeleccionVuelos.html', vuelo=vuelo)
+        if vuelo is None:
+            error = "No se encontró ningún vuelo con el routeId proporcionado"
+    return render_template('SeleccionVuelos.html', vuelo=vuelo, error=error)
+
+
+@app.route('/borrar_avion', methods=['GET'])
+def borrar_avion():
+    return redirect(url_for('buscar_avion'))
 
 
 if __name__ == "__main__":

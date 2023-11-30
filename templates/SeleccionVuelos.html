@@ -6,9 +6,16 @@
   <label for="route_id">Introduce el Route ID:</label>
   <input type="text" name="route_id" id="route_id" required />
   <button type="submit">Buscar</button>
+  <button type="submit" formaction="{{ url_for('borrar_avion') }}">
+    Borrar
+  </button>
 </form>
-{% if vuelo %}
-<div>
+{% if error %}
+<div class="error-container">
+  <div class="error">{{ error }}</div>
+</div>
+{% endif %} {% if vuelo %}
+<div class="styled-div">
   <p>Route ID: {{ vuelo[6].routeId }}</p>
   <p>Departure Code: {{ vuelo[1].departure_code }}</p>
   <p>IATA Code: {{ vuelo[2].iataCode }}</p>
@@ -17,6 +24,4 @@
   <p>Flight Status: {{ vuelo[5].flightStatus }}</p>
   <p>Name: {{ vuelo[7].name }}</p>
 </div>
-{% else %}
-<p>No se encontró ningún vuelo con el Route ID proporcionado.</p>
 {% endif %} {% endblock %}
