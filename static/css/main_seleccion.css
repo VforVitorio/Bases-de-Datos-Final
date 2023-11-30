@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a2b4c; /* Un azul oscuro para el fondo */
+    color: #FFFFFF; /* Blanco para el texto */
+}
+
+h1 {
+    color: #FFFFFF; /* Blanco para los títulos */
+    text-align: center;
+    padding: 20px 0;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: #3a5f7d; /* Un azul medio para el formulario de búsqueda */
+    padding: 20px;
+    border-radius: 4px;
+}
+
+form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #FFFFFF; /* Blanco para los botones */
+    color: #1a2b4c; /* Azul oscuro para el texto de los botones */
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+form button:hover {
+    background-color: #cccccc; /* Gris claro para el hover de los botones */
+}
+
+.styled-div {
+    width: 60%;
+    margin: 0 auto;
+    background-color: #3a5f7d; /* Un azul medio para los resultados de búsqueda */
+    color: white;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+p {
+    color: white;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+.error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+.error {
+    color: white;
+    background-color: #FF4F58; /* Un rojo para los mensajes de error */
+    text-align: center;
+    padding: 10px;
+    margin: 20px;
+}

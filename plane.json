@@ -1,9 +1,0 @@
-{
-    "flight":{
-        "type;": null,
-        "departure": null ,
-        "destination": null,
-        "flight status": null , 
-        "delay":null
-    }
-}
