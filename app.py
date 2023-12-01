@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
-
+from sqlalchemy.orm import joinedload
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:root@localhost:3306/aviones'
@@ -99,6 +99,24 @@ def buscar_avion():
 @app.route('/borrar_avion', methods=['GET'])
 def borrar_avion():
     return redirect(url_for('buscar_avion'))
+
+
+@app.route('/informacion-de-los-aeropuertos', methods=['GET'])
+def ver_rutas_aerolineas():
+    aeropuerto = request.args.get('aeropuerto')
+    resultados = None
+    busqueda_realizada = False
+
+    if aeropuerto:
+        vuelos = db.session.query(Flights).options(joinedload(Flights.airline), joinedload(
+            Flights.route)).filter(Flights.name.has(name=aeropuerto)).all()
+        busqueda_realizada = True
+
+        if vuelos:
+            resultados = [(vuelo.route.routeId, vuelo.airline.airline)
+                          for vuelo in vuelos]
+
+    return render_template('destinos.html', resultados=resultados, aeropuerto=aeropuerto, busqueda_realizada=busqueda_realizada)
 
 
 if __name__ == "__main__":
