@@ -3,12 +3,14 @@
     {
       "departure": "LEMD",
       "iataCode": "MAD",
-      "name": "Aeropuerto Adolfo Suarez Madrid Barajas ",
+      "name": "Aeropuerto Adolfo Suarez Madrid Barajas",
+      "latitude": 40.4165,
+      "longitude": -3.7026,
       "routes": [
         {
           "airline": "Vueling",
           "destination": "LEBL",
-          "routeId": "VLG456"
+          "routeId": "VLG426"
         },
         {
           "airline": "Air Europa Express",
@@ -19,6 +21,16 @@
           "airline": "Binter Canarias",
           "destination": "LPA",
           "routeId": "BIN234"
+        },
+        {
+          "airline": "Ryanair",
+          "destination": "LEAL",
+          "routeId": "RYR456"
+        },
+        {
+          "airline": "EasyJet",
+          "destination": "LEMG",
+          "routeId": "EZY789"
         }
       ]
     },
@@ -26,6 +38,8 @@
       "departure": "LEBL",
       "iataCode": "BCN",
       "name": "Aeropuerto de Barcelona-El Prat",
+      "latitude": 39.5696,
+      "longitude": 2.6502,
       "routes": [
         {
           "airline": "Iberia Regional",
@@ -40,7 +54,22 @@
         {
           "airline": "Vueling",
           "destination": "LEVC",
-          "routeId": "VLG789"
+          "routeId": "VLG219"
+        },
+        {
+          "airline": "Ryanair",
+          "destination": "LEMG",
+          "routeId": "RYR124"
+        },
+        {
+          "airline": "EasyJet",
+          "destination": "LEAL",
+          "routeId": "EZY456"
+        },
+        {
+          "airline": "Binter Canarias",
+          "destination": "GCLP",
+          "routeId": "EZY456"
         }
       ]
     },
@@ -48,21 +77,23 @@
       "departure": "LEPA",
       "iataCode": "PMI",
       "name": "Aeropuerto de Palma de Mallorca",
+      "latitude": 39.5696,
+      "longitude": 2.6502,
       "routes": [
         {
           "airline": "Air Europa Express",
           "destination": "LEMD",
-          "routeId": "AEE123"
+          "routeId": "AEE193"
         },
         {
           "airline": "Binter Canarias",
           "destination": "LEAL",
-          "routeId": "BIN456"
+          "routeId": "BIN455"
         },
         {
           "airline": "Vueling",
           "destination": "LEBL",
-          "routeId": "VLG789"
+          "routeId": "VLG189"
         }
       ]
     },
@@ -70,6 +101,8 @@
       "departure": "LEMG",
       "iataCode": "AGP",
       "name": "Aeropuerto de Malaga-Costa del Sol",
+      "latitude": 39.5696,
+      "longitude": 2.6502,
       "routes": [
         {
           "airline": "Iberia Regional",
@@ -79,12 +112,27 @@
         {
           "airline": "Air Europa Express",
           "destination": "LEPA",
-          "routeId": "AEE789"
+          "routeId": "AEE782"
         },
         {
           "airline": "Binter Canarias",
           "destination": "LPA",
-          "routeId": "BIN234"
+          "routeId": "BIN523"
+        },
+        {
+          "airline": "EasyJet",
+          "destination": "LEAL",
+          "routeId": "EZY534"
+        },
+        {
+          "airline": "Iberia",
+          "destination": "LEMD",
+          "routeId": "IBE789"
+        },
+        {
+          "airline": "Norwegian Air",
+          "destination": "LEBL",
+          "routeId": "NAX123"
         }
       ]
     },
@@ -92,21 +140,43 @@
       "departure": "LEAL",
       "iataCode": "ALC",
       "name": "Aeropuerto de Alicante-Elche",
+      "latitude": 38.2822,
+      "longitude": -0.5582,
       "routes": [
         {
           "airline": "Iberia Regional",
           "destination": "LEMD",
-          "routeId": "IBE123"
+          "routeId": "IBE143"
         },
         {
           "airline": "Air Europa Express",
           "destination": "LEPA",
-          "routeId": "AEE456"
+          "routeId": "AEE156"
         },
         {
           "airline": "Volotea",
           "destination": "LEVC",
           "routeId": "VOL789"
+        },
+        {
+          "airline": "Ryanair",
+          "destination": "LEMD",
+          "routeId": "RYR434"
+        },
+        {
+          "airline": "EasyJet",
+          "destination": "LEBL",
+          "routeId": "EZY446"
+        },
+        {
+          "airline": "Iberia",
+          "destination": "LEMD",
+          "routeId": "IBE189"
+        },
+        {
+          "airline": "Norwegian Air",
+          "destination": "LEPA",
+          "routeId": "NAX789"
         }
       ]
     },
@@ -114,11 +184,13 @@
       "departure": "LEVC",
       "iataCode": "VLC",
       "name": "Aeropuerto de Valencia",
+      "latitude": 39.4699,
+      "longitude": -0.3763,
       "routes": [
         {
           "airline": "Iberia Regional",
           "destination": "LEMD",
-          "routeId": "IBE234"
+          "routeId": "IBE214"
         },
         {
           "airline": "Air Europa Express",
@@ -129,6 +201,26 @@
           "airline": "Volotea",
           "destination": "LEBL",
           "routeId": "VOL123"
+        },
+        {
+          "airline": "Ryanair",
+          "destination": "LEMG",
+          "routeId": "RYR623"
+        },
+        {
+          "airline": "EasyJet",
+          "destination": "LEAL",
+          "routeId": "EZY431"
+        },
+        {
+          "airline": "Iberia",
+          "destination": "LEMD",
+          "routeId": "IBE289"
+        },
+        {
+          "airline": "Norwegian Air",
+          "destination": "LEPA",
+          "routeId": "NAX567"
         }
       ]
     },
@@ -136,6 +228,8 @@
       "departure": "LEZL",
       "iataCode": "SVQ",
       "name": "Aeropuerto de Sevilla",
+      "latitude": 37.4180,
+      "longitude": -5.8931,
       "routes": [
         {
           "airline": "Iberia Regional",
@@ -151,6 +245,26 @@
           "airline": "Binter Canarias",
           "destination": "LPA",
           "routeId": "BIN456"
+        },
+        {
+          "airline": "Iberia Regional",
+          "destination": "LEMD",
+          "routeId": "IBE234"
+        },
+        {
+          "airline": "Air Europa Express",
+          "destination": "LEPA",
+          "routeId": "AEE517"
+        },
+        {
+          "airline": "Vueling",
+          "destination": "LEBL",
+          "routeId": "VLG123"
+        },
+        {
+          "airline": "Ryanair",
+          "destination": "LEMG",
+          "routeId": "RYR567"
         }
       ]
     },
@@ -158,11 +272,13 @@
       "departure": "LEBB",
       "iataCode": "BIO",
       "name": "Aeropuerto de Bilbao",
+      "latitude": 43.3011,
+      "longitude": -2.9106,
       "routes": [
         {
           "airline": "Vueling",
           "destination": "LEMD",
-          "routeId": "VLG789"
+          "routeId": "VLG229"
         },
         {
           "airline": "Volotea",
@@ -173,6 +289,21 @@
           "airline": "Air-Balear",
           "destination": "LEBL",
           "routeId": "AIR567"
+        },
+        {
+          "airline": "Iberia",
+          "destination": "LEMD",
+          "routeId": "IBE356"
+        },
+        {
+          "airline": "Ryanair",
+          "destination": "LEAL",
+          "routeId": "RYR789"
+        },
+        {
+          "airline": "EasyJet",
+          "destination": "LEMG",
+          "routeId": "EZY123"
         }
       ]
     },
@@ -180,11 +311,13 @@
       "departure": "GCLP",
       "iataCode": "LPA",
       "name": "Aeropuerto de Gran Canaria",
+      "latitude": 27.9319,
+      "longitude": -15.3865,
       "routes": [
         {
           "airline": "Iberia Regional",
           "destination": "LEMD",
-          "routeId": "IBE456"
+          "routeId": "IBE436"
         },
         {
           "airline": "Air Europa Express",
@@ -195,6 +328,21 @@
           "airline": "Binter Canarias",
           "destination": "LEAL",
           "routeId": "BIN789"
+        },
+        {
+          "airline": "Ryanair",
+          "destination": "LEMG",
+          "routeId": "RYR143"
+        },
+        {
+          "airline": "EasyJet",
+          "destination": "LEBL",
+          "routeId": "EZY256"
+        },
+        {
+          "airline": "Vueling",
+          "destination": "LEVC",
+          "routeId": "VLG139"
         }
       ]
     },
@@ -202,6 +350,8 @@
       "departure": "GCXO",
       "iataCode": "TFN",
       "name": "Aeropuerto de Tenerife Norte",
+      "latitude": 28.4827,
+      "longitude": -16.3415,
       "routes": [
         {
           "airline": "Air Europa Express",
@@ -217,6 +367,26 @@
           "airline": "Air-Balear",
           "destination": "LEBL",
           "routeId": "AIR123"
+        },
+        {
+          "airline": "Iberia",
+          "destination": "LEMD",
+          "routeId": "IBE389"
+        },
+        {
+          "airline": "Ryanair",
+          "destination": "LEAL",
+          "routeId": "RYR123"
+        },
+        {
+          "airline": "EasyJet",
+          "destination": "LEMG",
+          "routeId": "EZY416"
+        },
+        {
+          "airline": "Binter Canarias",
+          "destination": "GCLP",
+          "routeId": "BIN989"
         }
       ]
     },
@@ -224,11 +394,13 @@
       "departure": "LEIB",
       "iataCode": "IBZ",
       "name": "Aeropuerto de Ibiza",
+      "latitude": 28.4827,
+      "longitude": -16.3415,
       "routes": [
         {
           "airline": "Iberia Regional",
           "destination": "LEMD",
-          "routeId": "IBE789"
+          "routeId": "IBE589"
         },
         {
           "airline": "Air Europa Express",
@@ -239,6 +411,21 @@
           "airline": "Binter Canarias",
           "destination": "LEAL",
           "routeId": "BIN890"
+        },
+        {
+          "airline": "Vueling",
+          "destination": "LEBL",
+          "routeId": "VLG154"
+        },
+        {
+          "airline": "Ryanair",
+          "destination": "LEMG",
+          "routeId": "RYR423"
+        },
+        {
+          "airline": "EasyJet",
+          "destination": "LEAL",
+          "routeId": "EZY742"
         }
       ]
     },
@@ -246,11 +433,13 @@
       "departure": "LEMH",
       "iataCode": "MAH",
       "name": "Aeropuerto de Menorca",
+      "latitude": 39.8626,
+      "longitude": 4.2186,
       "routes": [
         {
           "airline": "Air Europa Express",
           "destination": "LEMD",
-          "routeId": "AEE567"
+          "routeId": "AEE367"
         },
         {
           "airline": "Vueling",
@@ -261,6 +450,26 @@
           "airline": "Air-Balear",
           "destination": "LEBL",
           "routeId": "AIR890"
+        },
+        {
+          "airline": "Iberia",
+          "destination": "LEMD",
+          "routeId": "IBE142"
+        },
+        {
+          "airline": "Ryanair",
+          "destination": "LEAL",
+          "routeId": "RYR436"
+        },
+        {
+          "airline": "EasyJet",
+          "destination": "LEMG",
+          "routeId": "EZY439"
+        },
+        {
+          "airline": "Binter Canarias",
+          "destination": "GCLP",
+          "routeId": "BIN413"
         }
       ]
     },
@@ -268,6 +477,8 @@
       "departure": "LEST",
       "iataCode": "SCQ",
       "name": "Aeropuerto de Santiago de Compostela",
+      "latitude": 42.8978,
+      "longitude": -8.4151,
       "routes": [
         {
           "airline": "Vueling",
@@ -277,24 +488,46 @@
         {
           "airline": "Air Europa Express",
           "destination": "LEPA",
-          "routeId": "AEE678"
+          "routeId": "AEE378"
         },
         {
           "airline": "Vueling",
           "destination": "LEVC",
-          "routeId": "VLG567"
+          "routeId": "VLG557"
+        },
+        {
+          "airline": "Iberia Regional",
+          "destination": "LEMD",
+          "routeId": "IBE154"
+        },
+        {
+          "airline": "Ryanair",
+          "destination": "LEMG",
+          "routeId": "RYR464"
+        },
+        {
+          "airline": "EasyJet",
+          "destination": "LEAL",
+          "routeId": "EZY459"
+        },
+        {
+          "airline": "Binter Canarias",
+          "destination": "GCLP",
+          "routeId": "BIN514"
         }
       ]
     },
     {
-      "departure": "LEXV",
+      "departure": "LEVD",
       "iataCode": "VLL",
       "name": "Aeropuerto de Valladolid",
+      "latitude": 42.2318,
+      "longitude": -8.6268,
       "routes": [
         {
           "airline": "Iberia Regional",
           "destination": "LEMD",
-          "routeId": "IBE456"
+          "routeId": "IBE453"
         },
         {
           "airline": "Air Europa Express",
@@ -305,6 +538,26 @@
           "airline": "Binter Canarias",
           "destination": "LEAL",
           "routeId": "BIN567"
+        },
+        {
+          "airline": "Vueling",
+          "destination": "LEBL",
+          "routeId": "VLG198"
+        },
+        {
+          "airline": "Ryanair",
+          "destination": "LEMG",
+          "routeId": "RYR782"
+        },
+        {
+          "airline": "EasyJet",
+          "destination": "LEAL",
+          "routeId": "EZY236"
+        },
+        {
+          "airline": "Binter Canarias",
+          "destination": "GCLP",
+          "routeId": "BIN648"
         }
       ]
     },
@@ -312,11 +565,13 @@
       "departure": "LECO",
       "iataCode": "LCG",
       "name": "Aeropuerto de A Coruña",
+      "latitude": 43.3021,
+      "longitude": -8.3773,
       "routes": [
         {
-          "airline": "Air Europa Express",
+          "airline": "Vueling",
           "destination": "LEBL",
-          "routeId": "AEE123"
+          "routeId": "AEE143"
         },
         {
           "airline": "Vueling",
@@ -327,6 +582,21 @@
           "airline": "Air-Balear",
           "destination": "LEIB",
           "routeId": "ABA789"
+        },
+        {
+          "airline": "Ryanair",
+          "destination": "LEMG",
+          "routeId": "RYR233"
+        },
+        {
+          "airline": "EasyJet",
+          "destination": "LEAL",
+          "routeId": "EZY659"
+        },
+        {
+          "airline": "Binter Canarias",
+          "destination": "GCLP",
+          "routeId": "BIN416"
         }
       ]
     },
@@ -334,21 +604,38 @@
       "departure": "LEGR",
       "iataCode": "GRX",
       "name": "Aeropuerto de Granada-Jaen",
+      "latitude": 37.1887,
+      "longitude": -3.7774,
       "routes": [
         {
           "airline": "Iberia Regional",
           "destination": "LEBL",
-          "routeId": "IRE123"
+          "routeId": "IRE153"
         },
         {
           "airline": "Air Europa Express",
           "destination": "LESA",
-          "routeId": "AEE456"
+          "routeId": "AEE256"
         },
         {
           "airline": "Vueling",
           "destination": "LEXJ",
-          "routeId": "VLG7890"
+          "routeId": "VLG789"
+        },
+        {
+          "airline": "Ryanair",
+          "destination": "LEMG",
+          "routeId": "RYR949"
+        },
+        {
+          "airline": "EasyJet",
+          "destination": "LEAL",
+          "routeId": "EZY436"
+        },
+        {
+          "airline": "Binter Canarias",
+          "destination": "GCLP",
+          "routeId": "BIN123"
         }
       ]
     },
@@ -356,21 +643,43 @@
       "departure": "LEGE",
       "iataCode": "GRO",
       "name": "Aeropuerto de Gerona-Costa Brava",
+      "latitude": 41.9009,
+      "longitude": 2.7606,
       "routes": [
         {
           "airline": "Iberia Regional",
           "destination": "LEMD",
-          "routeId": "IRE123"
+          "routeId": "IRE983"
         },
         {
           "airline": "Air Europa Express",
           "destination": "LEBL",
-          "routeId": "AEE4567"
+          "routeId": "AEE327"
         },
         {
           "airline": "Binter Canarias",
           "destination": "LEZL",
-          "routeId": "BIN890"
+          "routeId": "BIN390"
+        },
+        {
+          "airline": "Vueling",
+          "destination": "LEBL",
+          "routeId": "VLG133"
+        },
+        {
+          "airline": "Ryanair",
+          "destination": "LEMG",
+          "routeId": "RYR487"
+        },
+        {
+          "airline": "EasyJet",
+          "destination": "LEAL",
+          "routeId": "EZY689"
+        },
+        {
+          "airline": "Binter Canarias",
+          "destination": "GCLP",
+          "routeId": "BIN124"
         }
       ]
     },
@@ -378,21 +687,43 @@
       "departure": "LEAM",
       "iataCode": "LEI",
       "name": "Aeropuerto de Almería",
+      "latitude": 36.8439,
+      "longitude": -2.3701,
       "routes": [
         {
           "airline": "Air Europa Express",
           "destination": "GCXO",
-          "routeId": "AEE1234"
+          "routeId": "AEE141"
         },
         {
           "airline": "Vueling",
           "destination": "LEMD",
-          "routeId": "VLG567"
+          "routeId": "VLG267"
         },
         {
           "airline": "Air-Balear",
           "destination": "LEST",
           "routeId": "ABA890"
+        },
+        {
+          "airline": "Iberia Regional",
+          "destination": "LEMD",
+          "routeId": "IBE329"
+        },
+        {
+          "airline": "Ryanair",
+          "destination": "LEMG",
+          "routeId": "RYR412"
+        },
+        {
+          "airline": "EasyJet",
+          "destination": "LEAL",
+          "routeId": "EZY129"
+        },
+        {
+          "airline": "Binter Canarias",
+          "destination": "GCLP",
+          "routeId": "BIN213"
         }
       ]
     },
@@ -400,21 +731,38 @@
       "departure": "LEMI",
       "iataCode": "MJV",
       "name": "Aeropuerto de Murcia-San Javier",
+      "latitude": 37.7749,
+      "longitude": -0.8124,
       "routes": [
         {
           "airline": "Iberia Regional",
           "destination": "LEJR",
-          "routeId": "IRE123"
+          "routeId": "IRE643"
         },
         {
           "airline": "Air Europa Express",
           "destination": "LEBZ",
-          "routeId": "AEE456"
+          "routeId": "AEE446"
         },
         {
           "airline": "Vueling",
           "destination": "LEJR",
-          "routeId": "VLG789"
+          "routeId": "VLG439"
+        },
+        {
+          "airline": "Ryanair",
+          "destination": "LEMG",
+          "routeId": "RYR422"
+        },
+        {
+          "airline": "EasyJet",
+          "destination": "LEAL",
+          "routeId": "EZY356"
+        },
+        {
+          "airline": "Binter Canarias",
+          "destination": "GCLP",
+          "routeId": "BIN629"
         }
       ]
     },
@@ -422,21 +770,23 @@
       "departure": "LESO",
       "iataCode": "EAS",
       "name": "Aeropuerto de San Sebastian",
+      "latitude": 43.3565,
+      "longitude": -1.7902,
       "routes": [
         {
           "airline": "Iberia Regional",
           "destination": "LEBL",
-          "routeId": "IRE123"
+          "routeId": "IRE749"
         },
         {
           "airline": "Air Europa Express",
           "destination": "LEMD",
-          "routeId": "AEE4567"
+          "routeId": "AEE557"
         },
         {
           "airline": "Binter Canarias",
           "destination": "GCXO",
-          "routeId": "BIN890"
+          "routeId": "BIN830"
         }
       ]
     },
@@ -444,21 +794,43 @@
       "departure": "LEPP",
       "iataCode": "PNA",
       "name": "Aeropuerto de Pamplona",
+      "latitude": 42.7700,
+      "longitude": -1.6463,
       "routes": [
         {
           "airline": "Air Europa Express",
           "destination": "LEMI",
-          "routeId": "AEE1234"
+          "routeId": "AEE133"
         },
         {
           "airline": "Vueling",
           "destination": "LEBZ",
-          "routeId": "VLG567"
+          "routeId": "VLG547"
         },
         {
           "airline": "Air-Balear",
           "destination": "LEJR",
-          "routeId": "ABA890"
+          "routeId": "ABA891"
+        },
+        {
+          "airline": "Iberia Regional",
+          "destination": "LEMD",
+          "routeId": "IBE198"
+        },
+        {
+          "airline": "Ryanair",
+          "destination": "LEMG",
+          "routeId": "RYR454"
+        },
+        {
+          "airline": "EasyJet",
+          "destination": "LEAL",
+          "routeId": "EZY631"
+        },
+        {
+          "airline": "Binter Canarias",
+          "destination": "GCLP",
+          "routeId": "BIN154"
         }
       ]
     },
@@ -466,21 +838,23 @@
       "departure": "LEJR",
       "iataCode": "XRY",
       "name": "Aeropuerto de Jerez",
+      "latitude": 36.7446,
+      "longitude": -6.0601,
       "routes": [
         {
           "airline": "Iberia Regional",
           "destination": "LEAS",
-          "routeId": "IRE123"
+          "routeId": "IRE113"
         },
         {
           "airline": "Air Europa Express",
           "destination": "LEXJ",
-          "routeId": "AEE456"
+          "routeId": "AEE666"
         },
         {
           "airline": "Vueling",
           "destination": "LEBL",
-          "routeId": "VLG7890"
+          "routeId": "VLG754"
         }
       ]
     },
@@ -488,23 +862,43 @@
       "departure": "LEAS",
       "iataCode": "OVD",
       "name": "Aeropuerto de Asturias",
+      "latitude": 43.5636,
+      "longitude": -6.0346,
       "routes": [
         {
           "airline": "Iberia Regional",
           "destination": "LEBL",
-
-          "routeId": "IRE123"
+          "routeId": "IRE323"
         },
         {
           "airline": "Air Europa Express",
           "destination": "LEMD",
-
-          "routeId": "AEE456"
+          "routeId": "AEE777"
         },
         {
           "airline": "Binter Canarias",
           "destination": "LEVC",
-          "routeId": "BIN789"
+          "routeId": "BIN249"
+        },
+        {
+          "airline": "Vueling",
+          "destination": "LEBL",
+          "routeId": "VLG589"
+        },
+        {
+          "airline": "Ryanair",
+          "destination": "LEMG",
+          "routeId": "RYR411"
+        },
+        {
+          "airline": "EasyJet",
+          "destination": "LEAL",
+          "routeId": "EZY433"
+        },
+        {
+          "airline": "Binter Canarias",
+          "destination": "GCLP",
+          "routeId": "BIN549"
         }
       ]
     },
@@ -512,21 +906,23 @@
       "departure": "LERS",
       "iataCode": "REU",
       "name": "Aeropuerto de Reus",
+      "latitude": 41.1474,
+      "longitude": 1.1672,
       "routes": [
         {
           "airline": "Air Europa Express",
           "destination": "LEVC",
-          "routeId": "AEE1234"
+          "routeId": "AEE973"
         },
         {
           "airline": "Vueling",
           "destination": "LEAS",
-          "routeId": "VLG567"
+          "routeId": "VLG597"
         },
         {
           "airline": "Air-Balear",
           "destination": "LEBZ",
-          "routeId": "ABA890"
+          "routeId": "ABA892"
         }
       ]
     },
@@ -534,16 +930,18 @@
       "departure": "LEZG",
       "iataCode": "ZAZ",
       "name": "Aeropuerto de Zaragoza",
+      "latitude": 41.6662,
+      "longitude": -1.0416,
       "routes": [
         {
           "airline": "Iberia Regional",
           "destination": "GCXO",
-          "routeId": "IRE123"
+          "routeId": "IRE533"
         },
         {
           "airline": "Air Europa Express",
           "destination": "LEVC",
-          "routeId": "AEE4567"
+          "routeId": "AEE887"
         },
         {
           "airline": "Vueling",
@@ -556,23 +954,24 @@
       "departure": "LEDA",
       "iataCode": "ILD",
       "name": "Aeropuerto de Lleida-Alguaire",
+      "latitude": 41.7273,
+     "longitude": 0.5357,
       "routes": [
         {
           "airline": "Iberia Regional",
           "destination": "LEBL",
 
-          "routeId": "IRE123"
+          "routeId": "IRE533"
         },
         {
           "airline": "Air Europa Express",
           "destination": "LEIB",
-
-          "routeId": "AEE456"
+          "routeId": "AEE984"
         },
         {
           "airline": "Binter Canarias",
           "destination": "LEJR",
-          "routeId": "BIN7890"
+          "routeId": "BIN754"
         }
       ]
     },
@@ -580,21 +979,23 @@
       "departure": "GEML",
       "iataCode": "MLN",
       "name": "Aeropuerto de Melilla",
+      "latitude": 35.2798,
+      "longitude": -2.9563,
       "routes": [
         {
           "airline": "Air Europa Express",
           "destination": "LEMD",
-          "routeId": "AEE123"
+          "routeId": "AEE192"
         },
         {
           "airline": "Vueling",
           "destination": "LEBL",
-          "routeId": "VLG456"
+          "routeId": "VLG409"
         },
         {
           "airline": "Air-Balear",
           "destination": "GCXO",
-          "routeId": "ABA789"
+          "routeId": "ABA389"
         }
       ]
     },
@@ -602,21 +1003,23 @@
       "departure": "LEBZ",
       "iataCode": "BJZ",
       "name": "Aeropuerto de Badajoz",
+      "latitude": 42.3576,
+      "longitude": -3.6208,
       "routes": [
         {
           "airline": "Iberia Regional",
           "destination": "LEJR",
-          "routeId": "IRE1234"
+          "routeId": "IRE154"
         },
         {
           "airline": "Air Europa Express",
           "destination": "LEVC",
-          "routeId": "AEE567"
+          "routeId": "AEE563"
         },
         {
           "airline": "Binter Canarias",
           "destination": "LEMD",
-          "routeId": "BIN890"
+          "routeId": "BIN840"
         }
       ]
     },
@@ -624,11 +1027,13 @@
       "departure": "LEXJ",
       "iataCode": "SDR",
       "name": "Aeropuerto de Santander",
+      "latitude": 43.4271,
+      "longitude": -3.8206,
       "routes": [
         {
           "airline": "Air Europa Express",
           "destination": "LEMD",
-          "routeId": "AEE12345"
+          "routeId": "AEE129"
         },
         {
           "airline": "Vueling",
@@ -638,7 +1043,22 @@
         {
           "airline": "Air-Balear",
           "destination": "LEPA",
-          "routeId": "ABA8900"
+          "routeId": "ABA893"
+        },
+        {
+          "airline": "Ryanair",
+          "destination": "LEMG",
+          "routeId": "RYR686"
+        },
+        {
+          "airline": "EasyJet",
+          "destination": "LEAL",
+          "routeId": "EZY549"
+        },
+        {
+          "airline": "Binter Canarias",
+          "destination": "GCLP",
+          "routeId": "BIN823"
         }
       ]
     },
@@ -646,24 +1066,25 @@
       "departure": "LEBG",
       "iataCode": "RGS",
       "name": "Aeropuerto de Burgos",
+      "latitude": 42.2080,
+      "longitude": -3.7245,
       "routes": [
         {
           "airline": "Iberia Regional",
           "destination": "LEMD",
-          "routeId": "IRE123"
+          "routeId": "IRE523"
           
         },
         {
           "airline": "Air Europa Express",
           "destination": "LEPA",
-          "routeId": "AEE456"
+          "routeId": "AEE174"
          
         },
         {
           "airline": "Binter Canarias",
           "destination": "LEAL",
-          "routeId": "BIN789"
-         
+          "routeId": "AEE174"       
         }
       ]
     },
@@ -671,24 +1092,39 @@
       "departure": "LESA",
       "iataCode": "SLM",
       "name": "Aeropuerto de Salamanca",
+      "latitude": 40.9521,
+      "longitude": -5.5019,
       "routes": [
         {
           "airline": "Air Europa Express",
           "destination": "LEMD",
-          "routeId": "AEE1234"
+          "routeId": "AEE763"
           
         },
         {
           "airline": "Vueling",
           "destination": "LEVC",
-          "routeId": "VLG567"
-          
+          "routeId": "VAEE763"
         },
         {
           "airline": "Air-Balear",
           "destination": "LEBL",
-          "routeId": "ABA890"
-          
+          "routeId": "ABA899"        
+        },
+        {
+          "airline": "Ryanair",
+          "destination": "LEMG",
+          "routeId": "RYR986"
+        },
+        {
+          "airline": "EasyJet",
+          "destination": "LEAL",
+          "routeId": "EZY489"
+        },
+        {
+          "airline": "Binter Canarias",
+          "destination": "GCLP",
+          "routeId": "BIN433"
         }
       ]
     }     
