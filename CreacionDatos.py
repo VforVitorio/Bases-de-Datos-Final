@@ -98,7 +98,7 @@ def create_routeids_table(c):
 
 def create_longitude_table(c):
     c.execute(''' 
-            CREATE TABLE IF NOT EXISTS longitude (
+            CREATE TABLE IF NOT EXISTS Longitude (
             id_longitude INTEGER AUTO_INCREMENT PRIMARY KEY, 
             longitude FLOAT
             )
@@ -109,7 +109,7 @@ def create_longitude_table(c):
 
 def create_latitude_table(c):
     c.execute(''' 
-            CREATE TABLE IF NOT EXISTS latitude (
+            CREATE TABLE IF NOT EXISTS Latitude (
             id_latitude INTEGER AUTO_INCREMENT PRIMARY KEY, 
             latitude FLOAT
             )
@@ -117,6 +117,7 @@ def create_latitude_table(c):
 
 
 # Creacion de la tabla Flights
+
 
 def create_flights_table(c):
     c.execute('''
@@ -138,8 +139,8 @@ def create_flights_table(c):
             FOREIGN KEY (id_destination) REFERENCES Destinations (id_destination),
             FOREIGN KEY (id_status) REFERENCES FlightStatuses (id_status),
             FOREIGN KEY (id_route) REFERENCES routeIds (id_route),
-            FOREIGN KEY (id_longitude) REFERENCES longitude (id_longitude),
-            FOREIGN KEY (id_latitude) REFERENCES latitude (id_latitude)
+            FOREIGN KEY (id_longitude) REFERENCES Longitude (id_longitude),
+            FOREIGN KEY (id_latitude) REFERENCES Latitude (id_latitude)
             
         )
     ''')
