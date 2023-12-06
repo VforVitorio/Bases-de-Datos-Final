@@ -49,6 +49,18 @@ class names(db.Model):
     name = db.Column(db.String(255))
 
 
+class Longitude(db.Model):
+    __tablename__ = 'longitude'
+    id_longitude = db.Column(db.Integer, primary_key=True)
+    longitude = db.Column(db.Float(255))
+
+
+class Latitude(db.Model):
+    __tablename__ = 'latitude'
+    id_latitude = db.Column(db.Integer, primary_key=True)
+    latitude = db.Column(db.Float(255))
+
+
 class Flights(db.Model):
     __tablename__ = 'Flights'
     id_flight = db.Column(db.Integer, primary_key=True)
@@ -62,6 +74,10 @@ class Flights(db.Model):
         db.Integer, db.ForeignKey('FlightStatuses.id_status'))
     id_route = db.Column(db.Integer, db.ForeignKey('routeIds.id_route'))
     id_name = db.Column(db.Integer, db.ForeignKey('names.id_name'))
+
+    id_longitude = db.Column(
+        db.Integer, db.ForeignKey('longitude.id_longitude'))
+    id_latitude = db.Column(db.Integer, db.ForeignKey('latitude.id_latitude'))
 
     departure = db.relationship(
         'Departures', backref=db.backref('flights', lazy=True))
@@ -77,20 +93,20 @@ class Flights(db.Model):
         'routeIds', backref=db.backref('flights', lazy=True))
     name = db.relationship('names', backref=db.backref('flights', lazy=True))
 
-# Definir ruta de inicio con el menu, luego cambiar la ruta de buscar avion a otra
-# Tienes que crear otro base html tipo base_menu y linkearlo con el html menu.html
-# Luego creas otro css llamalo main_menu por ejemplo y lo linkeaas a base_menu
+    longitude = db.relationship(
+        'Longitude', backref=db.backref('flights', lazy=True))
+    latitude = db.relationship(
+        'Latitude', backref=db.backref('flights', lazy=True))
 
 
 @app.route('/', methods=['GET'])
-# La ruta está definida como el inicio y esto hay que cambiarlo para que el menu sea el inicio
 def buscar_avion():
     route_id = request.args.get('route_id')
     error = None
     vuelo = None
     if route_id is not None:
-        vuelo = db.session.query(Flights, Departures, IataCodes, Airlines, Destinations, FlightStatuses, routeIds, names).join(Departures, Flights.id_departure == Departures.id_departure).join(IataCodes, Flights.id_iata == IataCodes.id_iata).join(Airlines, Flights.id_air == Airlines.id_air).join(
-            Destinations, Flights.id_destination == Destinations.id_destination).join(FlightStatuses, Flights.id_status == FlightStatuses.id_status).join(routeIds, Flights.id_route == routeIds.id_route).join(names, Flights.id_name == names.id_name).filter(routeIds.routeId == route_id).first()
+        vuelo = db.session.query(Flights, Departures, IataCodes, Airlines, Destinations, FlightStatuses, routeIds, names, Latitude, Longitude).join(Departures, Flights.id_departure == Departures.id_departure).join(IataCodes, Flights.id_iata == IataCodes.id_iata).join(Airlines, Flights.id_air == Airlines.id_air).join(
+            Destinations, Flights.id_destination == Destinations.id_destination).join(FlightStatuses, Flights.id_status == FlightStatuses.id_status).join(routeIds, Flights.id_route == routeIds.id_route).join(names, Flights.id_name == names.id_name).join(Latitude, Flights.id_latitude == Latitude.id_latitude).join(Longitude, Flights.id_longitude == Longitude.id_longitude).filter(routeIds.routeId == route_id).first()
         if vuelo is None:
             error = "No se encontró ningún vuelo con el routeId proporcionado"
     return render_template('SeleccionVuelos.html', vuelo=vuelo, error=error)

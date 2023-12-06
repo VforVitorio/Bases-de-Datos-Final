@@ -198,11 +198,11 @@ def insert_flight_data(plane, c, conn):
         id_route = c.lastrowid
 
         c.execute("INSERT INTO Latitude (latitude) VALUES (%s)",
-                  (plane['Latitude'],))
+                  (plane['latitude'],))
         id_latitude = c.lastrowid
 
         c.execute("INSERT INTO Longitude (longitude) VALUES (%s)",
-                  (plane['Longitude'],))
+                  (plane['longitude'],))
         id_longitude = c.lastrowid
 
         c.execute("INSERT INTO Flights (id_departure, id_iata, id_name, id_air, id_destination, id_status, id_route, id_latitude, id_longitude) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)",
