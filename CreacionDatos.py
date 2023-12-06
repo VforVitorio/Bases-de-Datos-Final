@@ -197,8 +197,16 @@ def insert_flight_data(plane, c, conn):
         c.execute("INSERT INTO routeIds (routeId) VALUES (%s)", (plane['Id'],))
         id_route = c.lastrowid
 
-        c.execute("INSERT INTO Flights (id_departure, id_iata, id_name, id_air, id_destination, id_status, id_route) VALUES (%s, %s, %s, %s, %s, %s, %s)",
-                  (id_departure, id_iata, id_name, id_air, id_destination, id_status, id_route))
+        c.execute("INSERT INTO Latitude (latitude) VALUES (%s)",
+                  (plane['Latitude'],))
+        id_latitude = c.lastrowid
+
+        c.execute("INSERT INTO Longitude (longitude) VALUES (%s)",
+                  (plane['Longitude'],))
+        id_longitude = c.lastrowid
+
+        c.execute("INSERT INTO Flights (id_departure, id_iata, id_name, id_air, id_destination, id_status, id_route, id_latitude, id_longitude) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)",
+                  (id_departure, id_iata, id_name, id_air, id_destination, id_status, id_route, id_latitude, id_longitude))
 
     except mysql.connector.Error as e:
         print(
