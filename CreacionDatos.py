@@ -110,7 +110,7 @@ def create_longitude_table(c):
 def create_latitude_table(c):
     c.execute(''' 
             CREATE TABLE IF NOT EXISTS latitude (
-            id_longitude INTEGER AUTO_INCREMENT PRIMARY KEY, 
+            id_latitude INTEGER AUTO_INCREMENT PRIMARY KEY, 
             latitude FLOAT
             )
                 ''')
