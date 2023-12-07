@@ -1,1 +1,41 @@
-{% extends 'base_seleccion.html' %}
+
+{% extends 'base_menu.html' %}
+
+{% block head %}
+<title>Flight radar</title>
+{% endblock %}
+
+{% block body %}
+
+<body>
+<h1>Flight radar</h1>
+
+<div class="avionDespegando">
+
+    <div class="avionDespegando">
+
+        <a href="{{ url_for('ver_rutas_aerolineas') }}">
+            <img 
+                src="{{ url_for('static', filename='/imagenes/airplaneTakeOff.png') }}" 
+                alt="avionDespegando">
+        </a>
+    
+        <a href="{{ url_for('buscar_avion') }}">
+            <img 
+                src="{{ url_for('static', filename='/imagenes/planeInfo.png') }}" 
+                alt="avionDespegando">    
+        </a>
+    
+    </div>
+
+
+</div>
+
+
+
+
+</body>
+
+
+
+{% endblock %}
