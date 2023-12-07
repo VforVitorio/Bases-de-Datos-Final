@@ -1,7 +1,21 @@
 
-/* Color y tamaño del boton */
+/* Color de fondo */
+
+body {
+  background-color: #EEEEEE;
+}
+
+/* Color títulos*/
+h1 {
+  text-align: center;
+  margin-top: 50px; /* Ajusta este valor según tus necesidades */
+  color: #273872;
+  font-size: 50px;
+  font-family: Helvetica;
+}
+
 .collapsible {
-  background-color: #a61414;
+  background-color: #393e46;
   cursor: pointer;
   padding: 18px;
   text-align: left;
@@ -10,10 +24,20 @@
   width: 100%;
 }
 
-/* color y tamaño de lo que está dentro */
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #2a6dd8;
+.avionDespegando {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 200px;
+  display: flex;
+  color: #000000;
+  justify-content: space-between; /* Opcional: añade espacio entre las imágenes */
+}
+
+.avionDespegando img {
+  width: 80%;
+  height: auto;
+  margin-right: 30px; /* Ajusta este valor según tus necesidades */
 }
