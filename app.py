@@ -54,13 +54,13 @@ class names(db.Model):
 class Longitude(db.Model):
     __tablename__ = 'longitude'
     id_longitude = db.Column(db.Integer, primary_key=True)
-    longitude = db.Column(db.Float(255))
+    longitude = db.Column(db.Float)
 
 
 class Latitude(db.Model):
     __tablename__ = 'latitude'
     id_latitude = db.Column(db.Integer, primary_key=True)
-    latitude = db.Column(db.Float(255))
+    latitude = db.Column(db.Float)
 
 
 class Flights(db.Model):
