@@ -9,26 +9,8 @@
     {% block head %}{% endblock %}
   </head>
   <body>
-    <!-- Sección colapsable -->
-    <button class="collapsible" onclick="toggleCollapsible()">
-      <img src="" alt="">
-    </button>
-    <div class="content" id="collapsibleContent">
-      <p>holaa que tal yo soy santi</p>
-    </div>
-
-
-    <script>
-      function toggleCollapsible() {
-        var content = document.getElementById("collapsibleContent");
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
-      }
-    </script>
 
     {% block body %}{% endblock %}
+    
   </body>
 </html>
