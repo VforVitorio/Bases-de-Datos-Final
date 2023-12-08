@@ -1,11 +1,11 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import joinedload
-#import pymysql
+# import pymysql
 
-#pymysql.install_as_MySQLdb()
+# pymysql.install_as_MySQLdb()
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:1234@localhost:3306/aviones'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:root@localhost:3306/aviones'
 db = SQLAlchemy(app)
 
 
@@ -101,11 +101,9 @@ class Flights(db.Model):
         'Latitude', backref=db.backref('flights', lazy=True))
 
 
-
 @app.route('/', methods=['GET'])
 def menu():
     return render_template('menu.html')
-
 
 
 @app.route('/buscar_avion', methods=['GET'])
