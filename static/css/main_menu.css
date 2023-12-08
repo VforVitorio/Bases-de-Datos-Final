@@ -7,11 +7,13 @@ body {
 
 /* Color títulos*/
 h1 {
+  color: white;
+  background-color: #333333;
   text-align: center;
-  margin-top: 50px; /* Ajusta este valor según tus necesidades */
-  color: #000000;
-  font-size: 50px;
+  font-size: 36px;
+  padding: 10px;
   font-family: Arial;
+  font-size: 40pt;
 }
 
 p{
@@ -28,16 +30,8 @@ p{
   width: 100%;
 }
 
-
-
-/* Centrado de las dos primeras imagenes */
-.primerBloque {
-  display: flex;
-  justify-content: center;
-}
-
-/* Centrado de la ultima imagen */
-.segundoBloque {
+/* Centrado imagenes cabecera */
+.encabezado, .primerBloque, .segundoBloque {
   display: flex;
   justify-content: center;
 }
@@ -67,6 +61,16 @@ p{
   background-color: #F4F5F6; 
   
 }
+
+/* tamaño imagenes cabecera*/
+
+.encabezado img {
+  width: 100px;
+  height: auto;
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
 
 /*  Tamaño Imagenes */
 .avionDespegando img, .ticket img, .diagrama img {
