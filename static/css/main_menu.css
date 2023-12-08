@@ -2,15 +2,19 @@
 /* Color de fondo */
 
 body {
-  background-color: #2a363b;
+  background-color: #919EA9;
 }
 
 /* Color títulos*/
 h1 {
   text-align: center;
   margin-top: 50px; /* Ajusta este valor según tus necesidades */
-  color: #99B898;
+  color: #000000;
   font-size: 50px;
+  font-family: Arial;
+}
+
+p{
   font-family: Helvetica;
 }
 
@@ -32,28 +36,40 @@ h1 {
   justify-content: center;
 }
 
+/* Centrado de la ultima imagen */
+.segundoBloque {
+  display: flex;
+  justify-content: center;
+}
+
 /* Fondo de las imagenes */
 .avionDespegando, .ticket {
-  width: 300px; 
+  width: 500px; 
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  background-color: #ff874C; 
+  background-color: #F4F5F6; 
   margin: 23pt;
-  height: 400px;
-  width: auto;
 }
 
-/* Mover las imgaenes en su contenedor */
-
-.relleno {
-  height: 0px; 
+/* Fondo segunda imagen */
+.diagrama {
+  width: 500px; 
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #F4F5F6; 
+  
 }
 
-.avionDespegando img, .ticket img {
+/*  Tamaño Imagenes */
+.avionDespegando img, .ticket img, .diagrama img {
   width: 300px;
   height: auto;
   margin-top: 80px;
