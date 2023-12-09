@@ -1,55 +1,57 @@
-
-{% extends 'base_menu.html' %}
-
-{% block head %}
+{% extends 'base_menu.html' %} {% block head %}
 <title>Flight radar</title>
-{% endblock %}
-
-{% block body %}
+{% endblock %} {% block body %}
 
 <body>
+  <div class="encabezado">
+    <img
+      src="{{ url_for('static', filename='/imagenes/torreControl.png') }}"
+      alt="avionDespegando"
+    />
+    <img
+      src="{{ url_for('static', filename='/imagenes/radar.png') }}"
+      alt="avionDespegando"
+    />
+    <img
+      src="{{ url_for('static', filename='/imagenes/torreControl.png') }}"
+      alt="avionDespegando"
+    />
+  </div>
 
-<div class="encabezado">
+  <h1>FLIGHT RADAR</h1>
 
-    <img src="{{ url_for('static', filename='/imagenes/torreControl.png') }}" alt="avionDespegando">
-    <img src="{{ url_for('static', filename='/imagenes/radar.png') }}" alt="avionDespegando">
-    <img src="{{ url_for('static', filename='/imagenes/torreControl.png') }}" alt="avionDespegando">
-   
-</div>
-
-<h1>FLIGHT RADAR</h1>
-
-
-<div class="primerBloque">
+  <div class="primerBloque">
     <div class="avionDespegando">
-        <a href="{{ url_for('ver_rutas_aerolineas') }}">
-            <img src="{{ url_for('static', filename='/imagenes/departures.png') }}" alt="avionDespegando">
-        </a>
-        <p>RUTAS ACTIVAS AEROPUERTOS ESPAÑOLES</p>
+      <a href="{{ url_for('ver_rutas_aerolineas') }}">
+        <img
+          src="{{ url_for('static', filename='/imagenes/departures.png') }}"
+          alt="avionDespegando"
+        />
+      </a>
+      <p>RUTAS ACTIVAS AEROPUERTOS ESPAÑOLES</p>
     </div>
     <div class="ticket">
-        <a href="{{ url_for('buscar_avion') }}">
-            <img src="{{ url_for('static', filename='/imagenes/boardingPass.png') }}" alt="ticket">    
-        </a>
-        <p>BUSCA LA INFORMACIÓN DE TU VUELO</p>
+      <a href="{{ url_for('buscar_avion') }}">
+        <img
+          src="{{ url_for('static', filename='/imagenes/boardingPass.png') }}"
+          alt="ticket"
+        />
+      </a>
+      <p>BUSCA LA INFORMACIÓN DE TU VUELO</p>
     </div>
-</div>
+  </div>
 
-
-<div class="segundoBloque">
-
-    <div class = "diagrama">
-        <a href="{{ url_for('ver_rutas_aerolineas') }}">
-            <img src="{{ url_for('static', filename='/imagenes/grafo.png') }}" alt="grafico">
-        </a>
-        <p>GRÁFICO DE RUTAS ACTIVAS</p>
+  <div class="segundoBloque">
+    <div class="diagrama">
+      <a href="{{ url_for('ver_rutas_aerolineas') }}">
+        <img
+          src="{{ url_for('static', filename='/imagenes/grafo.png') }}"
+          alt="grafico"
+        />
+      </a>
+      <p>GRÁFICO DE RUTAS ACTIVAS</p>
     </div>
-</div>
-
-
-
+  </div>
 </body>
-
-
 
 {% endblock %}
