@@ -163,15 +163,18 @@ def get_flight_data():
         })
     return {'nodes': nodes, 'links': links}
 
+
 @app.route('/vuelos', methods=['GET'])
 def obtener_vuelos():
     data = get_flight_data()
     return jsonify(data)
 
+
 @app.route('/grafico', methods=['GET'])
 def grafico():
     vuelos = get_flight_data()
     return render_template('base_diagrama.html', vuelos=vuelos)
+
 
 if __name__ == "__main__":
     with app.app_context():
