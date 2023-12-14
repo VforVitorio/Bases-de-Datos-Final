@@ -5,7 +5,9 @@
 <form action="/informacion-de-los-aeropuertos" method="GET">
   <input type="text" name="aeropuerto" placeholder="Nombre del aeropuerto" />
   <button type="submit">Buscar</button>
-  <button type="button" onclick="location.href='/borrar_avion'">Borrar</button>
+  <button type="button" onclick="location.href='/borrar_aerolinea'">
+    Borrar
+  </button>
 </form>
 {% if error %}
 <p class="error">{{ error }}</p>

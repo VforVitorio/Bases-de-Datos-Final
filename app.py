@@ -142,7 +142,7 @@ def ver_rutas_aerolineas():
     return render_template('destinos.html', resultados=resultados, aeropuerto=aeropuerto, busqueda_realizada=busqueda_realizada)
 
 
-@app.route('/borrar_avion', methods=['GET'])
+@app.route('/borrar_aerolinea', methods=['GET'])
 def borrar_aerolineas():
     return redirect(url_for('ver_rutas_aerolineas'))
 
