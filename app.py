@@ -150,7 +150,7 @@ def borrar_aerolineas():
 
 @app.route('/grafico')
 def grafico():
-    return render_template('base_diagrama.html')
+    return render_template('diagrama.html')
 
 
 if __name__ == "__main__":
