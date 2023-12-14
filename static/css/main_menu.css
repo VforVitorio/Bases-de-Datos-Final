@@ -14,6 +14,7 @@ h1 {
   padding: 10px;
   font-family: Arial;
   font-size: 40pt;
+  margin-top: -5px
 }
 
 p{
@@ -61,8 +62,6 @@ p{
   margin-bottom: 20px;
  
 }
-
-
 
 .avionDespegando img, .ticket img{
   width: 300px;
