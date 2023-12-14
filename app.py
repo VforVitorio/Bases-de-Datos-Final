@@ -159,12 +159,11 @@ def grafico():
 def get_graph():
     flights_with_departures = Flights.query.options(joinedload(Flights.departure)).all()
     flights_with_destinations = Flights.query.options(joinedload(Flights.destination)).all()
-    
 
-    nodes = [{'name': flight.departure.departure_code, "edad": 1} for flight in flights_with_departures]  # Iterate over all flights
-    links = [{'source': flight.departure.departure_code, 'target': flight.destination.destination} for flight in flights_with_destinations]  # Iterate over all flights and destinations
+    nodes = [{'name': flight.departure.departure_code, 'group': 1} for flight in flights_with_departures]  # Iterate over all flights
+    links = [{'source': flight.departure.departure_code, 'target': flight.destination.destination} for flight in flights_with_destinations]
 
-    graph = {'links': links, 'nodes': nodes}
+    graph = {'nodes': nodes, 'links': links}  
 
     return jsonify(graph)
 
