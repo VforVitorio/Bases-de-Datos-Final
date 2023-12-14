@@ -1,36 +1,17 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> 
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename ='css/main_menu.css')}}"
+      href="{{ url_for('static', filename='css/main_menu.css') }}"
     />
     {% block head %}{% endblock %}
   </head>
   <body>
-    <!-- Sección colapsable -->
-    <button class="collapsible" onclick="toggleCollapsible()">
-      MESSI MESSI MESSI
-    </button>
-    <div class="content" id="collapsibleContent">
-      <p>Poner aqui todos los datos o las opciones o lo que vayamos a poner</p>
-    </div>
-
-    <script>
-      function toggleCollapsible() {
-        var content = document.getElementById("collapsibleContent");
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
-      }
-    </script>
-
     {% block body %}{% endblock %}
   </body>
 </html>

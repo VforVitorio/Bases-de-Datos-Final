@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import joinedload
+import pymysql
+
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:root@localhost:3306/aviones'
@@ -52,13 +54,13 @@ class names(db.Model):
 class Longitude(db.Model):
     __tablename__ = 'longitude'
     id_longitude = db.Column(db.Integer, primary_key=True)
-    longitude = db.Column(db.Float(255))
+    longitude = db.Column(db.Float)
 
 
 class Latitude(db.Model):
     __tablename__ = 'latitude'
     id_latitude = db.Column(db.Integer, primary_key=True)
-    latitude = db.Column(db.Float(255))
+    latitude = db.Column(db.Float)
 
 
 class Flights(db.Model):
@@ -100,6 +102,11 @@ class Flights(db.Model):
 
 
 @app.route('/', methods=['GET'])
+def menu():
+    return render_template('menu.html')
+
+
+@app.route('/buscar_avion', methods=['GET'])
 def buscar_avion():
     route_id = request.args.get('route_id')
     error = None
@@ -135,9 +142,14 @@ def ver_rutas_aerolineas():
     return render_template('destinos.html', resultados=resultados, aeropuerto=aeropuerto, busqueda_realizada=busqueda_realizada)
 
 
-@app.route('/borrar_avion', methods=['GET'])
+@app.route('/borrar_aerolinea', methods=['GET'])
 def borrar_aerolineas():
     return redirect(url_for('ver_rutas_aerolineas'))
+
+
+@app.route('/grafico')
+def grafico():
+    return render_template('base_diagrama.html')
 
 
 if __name__ == "__main__":

@@ -1,6 +1,52 @@
 {% extends 'base_seleccion.html' %} {% block head %}
 <title>Consulta de Información de Avión</title>
 {% endblock %} {% block body %}
+
+<div class="collapsible">
+  <button class="collapsible" onclick="toggleCollapsible()">
+    <img src="{{ url_for('static', filename='/imagenes/menu.png') }}" alt="" />
+  </button>
+  <div class="content" id="collapsibleContent">
+    <div class="primerBloque">
+      <div class="enlaceSalidas">
+        <a href="{{ url_for('ver_rutas_aerolineas') }}">
+          <img
+            src="{{ url_for('static', filename='/imagenes/departures.png') }}"
+            alt="avionDespegando"
+          />
+        </a>
+      </div>
+      <div class="enlaceVuelo">
+        <a href="{{ url_for('buscar_avion') }}">
+          <img
+            src="{{ url_for('static', filename='/imagenes/boardingPass.png') }}"
+            alt="ticket"
+          />
+        </a>
+      </div>
+      <div class="diagrama">
+        <a href="{{ url_for('grafico') }}">
+          <img
+            src="{{ url_for('static', filename='/imagenes/grafo.png') }}"
+            alt="ticket"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleCollapsible() {
+      var content = document.getElementById("collapsibleContent");
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    }
+  </script>
+</div>
+
 <h1>Consulta de Información de Avión</h1>
 <form method="GET" action="{{ url_for('buscar_avion') }}">
   <label for="route_id">Introduce el Route ID:</label>

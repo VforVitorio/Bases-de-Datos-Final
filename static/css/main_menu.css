@@ -1,19 +1,75 @@
 
-/* Color y tamaño del boton */
-.collapsible {
-  background-color: #a61414;
-  cursor: pointer;
-  padding: 18px;
-  text-align: left;
-  border: none;
-  outline: none;
-  width: 100%;
+/* Color de fondo */
+
+body {
+  background-color: #919EA9;
 }
 
-/* color y tamaño de lo que está dentro */
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #2a6dd8;
+/* Color títulos*/
+h1 {
+  color: white;
+  background-color: #333333;
+  text-align: center;
+  font-size: 36px;
+  padding: 10px;
+  font-family: Arial;
+  font-size: 40pt;
+  margin-top: -5px
+}
+
+p{
+  font-family: Helvetica;
+}
+
+/* Centrado imagenes cabecera */
+.encabezado, .primerBloque, .segundoBloque {
+  display: flex;
+  justify-content: center;
+}
+
+/* Fondo de las imagenes */
+.avionDespegando, .ticket {
+  width: 500px; 
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #F4F5F6; 
+  margin: 23pt;
+}
+
+/* Fondo segunda imagen */
+.diagrama {
+  width: 500px; 
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  background-color: #F4F5F6; 
+  
+}
+
+/* tamaño imagenes cabecera*/
+
+.encabezado img {
+  width: 100px;
+  height: auto;
+  margin-top: 80px;
+  margin-bottom: 20px;
+ 
+}
+
+.avionDespegando img, .ticket img{
+  width: 300px;
+  height: auto;
+  margin-top: 80px;
+}
+
+.diagrama img {
+  width: 250px; 
+  height: auto;
 }
