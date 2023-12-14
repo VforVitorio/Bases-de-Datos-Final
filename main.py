@@ -1,5 +1,7 @@
 import json
 import CreacionDatos as cd
+flightStatus = ['Scheduled', 'Cancelled', 'Delayed']
+prop = [0.80, 0.05, 0.15]
 i = 0
 
 conn, c = cd.create_database_connection()
@@ -16,7 +18,7 @@ def tableCreation():
     cd.create_routeids_table(c)
     cd.create_flights_table(c)
 
-def main(route, i):
+def main(route, i, flightStatus, prop):
     
     for i in range (100):
         conn, c = cd.create_database_connection()
@@ -24,10 +26,6 @@ def main(route, i):
         
         with open('routes.json') as routes_file:
             route = json.load(routes_file)
-            
-        flightStatus = ['Scheduled', 'Cancelled', 'Delayed']
-        prop = [0.80, 0.15, 0.05]
-        
         
         plane = cd.get_random_flight(flightStatus, prop, route)
         print(plane)
@@ -39,4 +37,4 @@ with open('routes.json') as routes_file:
     route = json.load(routes_file)
 
 # Llamar a main() con los datos cargados
-main(route, i)
+main(route, i, flightStatus, prop)

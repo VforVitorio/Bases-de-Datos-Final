@@ -1,11 +1,11 @@
-from flask import Flask, render_template, request, redirect, url_for, jsonify
+from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import joinedload
-# import pymysql
+import pymysql
 
-# pymysql.install_as_MySQLdb()
+pymysql.install_as_MySQLdb()
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:root@localhost:3306/aviones'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:1234@localhost:3306/aviones'
 db = SQLAlchemy(app)
 
 
@@ -147,33 +147,9 @@ def borrar_aerolineas():
     return redirect(url_for('ver_rutas_aerolineas'))
 
 
-def get_flight_data():
-    vuelos = db.session.query(Flights).all()
-    nodes = []
-    links = []
-    for vuelo in vuelos:
-        nodes.append({
-            'id': vuelo.id_flight,
-            'name': vuelo.name.name,
-
-        })
-        links.append({
-            'source': vuelo.departure.departure_code,
-            'target': vuelo.destination.destination
-        })
-    return {'nodes': nodes, 'links': links}
-
-
-@app.route('/vuelos', methods=['GET'])
-def obtener_vuelos():
-    data = get_flight_data()
-    return jsonify(data)
-
-
-@app.route('/grafico', methods=['GET'])
+@app.route('/grafico')
 def grafico():
-    vuelos = get_flight_data()
-    return render_template('base_diagrama.html', vuelos=vuelos)
+    return render_template('base_diagrama.html')
 
 
 if __name__ == "__main__":
