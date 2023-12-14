@@ -1,84 +1,49 @@
 {% extends 'base_diagrama.html' %}
+{% block head%}
+
+{% endblock %}
 
 {% block body%}
-  <canvas id = "network" width="800" height="500"></canvas> 
 
-  <script>
-    var graph = {
-      nodes: [
-      {name: "santiago", age: 13},
-      {name: "s", age: 12},
-      {name: "sq", age: 14},
-      {name: "santiwfw", age: 16},
-      {name: "sanwdwdw", age: 17},
-      {name: "savwvonw", age: 11}
-    ],
-    links: [
-      {source: "sq", target: "santiago"},
-      {source: "s", target: "sq"},
-      {source: "s", target: "santiago"},
-      {source: "santiwfw", target: "santiago"},
-      {source: "savwvonw", target: "savwvonw"}
-    ]
-    };
 
-    var canvas = d3.select("#network"),
-      width = canvas.attr("width"),
-      height = canvas.attr("height"),
-      ctx = canvas.node().getContext("2d"),
-      r = 20,
-      simulation = d3.forceSimulation()
-        .force("x", d3.forceX(width/2))
-        .force("y", d3.forceY(height/2)) 
-        .force("collide", d3.forceCollide(r+5))
-        .force("charge", d3.forceManyBody().strength(-655 ))
-        .on("tick", update) 
-        .force("link", d3.forceLink()
-          .id(function (d) {return d.name; }));
+<div class="collapsible">
+  <button class="collapsible" onclick="toggleCollapsible()">
+    <img src="{{ url_for('static', filename='/imagenes/menu.png') }}" alt="">
+  </button>
+  <div class="content" id="collapsibleContent">
+    <div class="primerBloque">
+      <div class="enlaceSalidas">
+          <a href="{{ url_for('ver_rutas_aerolineas') }}">
+              <img src="{{ url_for('static', filename='/imagenes/departures.png') }}" alt="avionDespegando">
+          </a>
+         
+      </div>
+      <div class="enlaceVuelo">
+          <a href="{{ url_for('buscar_avion') }}">
+              <img src="{{ url_for('static', filename='/imagenes/boardingPass.png') }}" alt="ticket">    
+          </a>
+          
+      </div>
+      <div class="diagrama">
+        <a href="{{ url_for('grafico') }}">
+            <img src="{{ url_for('static', filename='/imagenes/grafo.png') }}" alt="ticket">    
+        </a>
+        
+    </div>
+    
+  </div>
+</div>
+  
+  <h1>Diagrama Entidad Relacion</h1>
 
-    simulation.nodes(graph.nodes); 
-    simulation.force("link")
-      .links(graph.links);
+  <div class = "Imagen">
 
-    function update() {
-      ctx.clearRect(0, 0, width, height);
+      <img src="{{ url_for('static', filename='/imagenes/esquemaER.png') }}" alt="avionDespegando">
+     
+  </div>
 
-      ctx.beginPath();
-      graph.links.forEach(drawLink);
-      ctx.stroke();
 
-      ctx.beginPath();
-      graph.nodes.forEach(drawNode);
-      ctx.fill();
-
-      // Draw node names
-      ctx.font = '12px Arial'; // Set the font size and family
-      ctx.fillStyle = 'black'; // Set the text color
-      graph.nodes.forEach(drawNodeName);
-    }
-
-    function drawNode (d) {
-      ctx.moveTo(d.x, d.y);
-      ctx.arc(d.x, d.y, r, 0, Math.PI*2);
-      ctx.fill(); // Fill the node
-
-      // Draw the node name
-      ctx.fillStyle = 'red'; // Set the text color
-      ctx.fillText(d.name, d.x, d.y);
-    }
-
-    function drawLink (l) {
-      ctx.moveTo(l.source.x, l.source.y);
-      ctx.lineTo(l.target.x, l.target.y);
-    }
-
-    function drawNodeName(d) {
-      ctx.fillText(d.name, d.x, d.y);
-    }
-
-    update();
-
-  </script>
+ 
 {% endblock %}
 </body>
 </html>

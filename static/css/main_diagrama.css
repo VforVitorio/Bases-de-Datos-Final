@@ -1,0 +1,45 @@
+
+body {
+    background-color: #919EA9;
+}
+
+h1 {
+    color: white;
+    background-color: #333333;
+    text-align: center;
+    font-size: 36px;
+    padding: 10px;
+    font-family: Arial;
+    font-size: 40pt;
+}
+
+
+p {
+    font-family: Helvetica;
+}
+
+.Imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#collapsible {
+    background-color: #333333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: auto; /* Cambiado de 100% a auto */
+    width: auto; /* Cambiado de 200px a auto */
+}
+
+#collapsibleContent {
+    display: none; /* Añadido */
+    width: 100%; /* Añadido */
+}
+
+button.collapsible img {
+    width: 80px; 
+    height: auto;
+}
