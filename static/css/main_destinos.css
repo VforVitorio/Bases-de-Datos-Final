@@ -14,6 +14,7 @@ h1 {
     padding: 10px;
     font-family: Arial;
     font-size: 40pt;
+    margin-top: -5px
 }
 
 p{
@@ -34,7 +35,6 @@ form input[type="text"] {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
-    margin-right: 10px; /* Espacio entre el input y los botones */
 }
 
 form button {
@@ -50,6 +50,7 @@ form button {
 form button:hover {
     background-color: #cccccc; /* Gris claro para el hover de los botones */
 }
+
 
 .styled-div {
     width: 60%;
@@ -104,21 +105,41 @@ p {
 }
 
 .collapsible {
-    background-color: #333333;;
-    
+    background-color: #333333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: auto; 
+    width: auto; 
 }
-
+#collapsibleContent {
+    display: none; 
+    width: 100%; 
+}
 button.collapsible img {
-    width: 180px; /* Adjust as needed */
+    width: 80px; 
     height: auto;
 }
 
+
 .primerBloque {
     display: flex;
-    justify-content: space-between; /* Adjust as needed */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.enlaceSalidas img, .enlaceVuelo img, .diagrama img {
-    width: 350px; /* Adjust as needed */
+.primerBloque div {
+    margin: 80px 0; 
+}
+
+.enlaceSalidas img, .enlaceVuelo img {
+    width: 200px; 
+    height: auto;
+    margin-top: 15px;
+}
+
+.diagrama img {
+    width: 100px; /* Adjust as needed */
     height: auto;
 }

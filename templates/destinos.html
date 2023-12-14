@@ -4,31 +4,36 @@
 
 <div class="collapsible">
   <button class="collapsible" onclick="toggleCollapsible()">
-    <img src="{{ url_for('static', filename='/imagenes/menu.png') }}" alt="">
+    <img src="{{ url_for('static', filename='/imagenes/menu.png') }}" alt="" />
   </button>
   <div class="content" id="collapsibleContent">
     <div class="primerBloque">
       <div class="enlaceSalidas">
-          <a href="{{ url_for('ver_rutas_aerolineas') }}">
-              <img src="{{ url_for('static', filename='/imagenes/departures.png') }}" alt="avionDespegando">
-          </a>
-         
+        <a href="{{ url_for('ver_rutas_aerolineas') }}">
+          <img
+            src="{{ url_for('static', filename='/imagenes/departures.png') }}"
+            alt="avionDespegando"
+          />
+        </a>
       </div>
       <div class="enlaceVuelo">
-          <a href="{{ url_for('buscar_avion') }}">
-              <img src="{{ url_for('static', filename='/imagenes/boardingPass.png') }}" alt="ticket">    
-          </a>
-          
+        <a href="{{ url_for('buscar_avion') }}">
+          <img
+            src="{{ url_for('static', filename='/imagenes/boardingPass.png') }}"
+            alt="ticket"
+          />
+        </a>
       </div>
       <div class="diagrama">
         <a href="{{ url_for('grafico') }}">
-            <img src="{{ url_for('static', filename='/imagenes/grafo.png') }}" alt="ticket">    
+          <img
+            src="{{ url_for('static', filename='/imagenes/grafo.png') }}"
+            alt="ticket"
+          />
         </a>
-        
+      </div>
     </div>
-    
   </div>
-</div>
 
   <script>
     function toggleCollapsible() {
@@ -41,7 +46,6 @@
     }
   </script>
 </div>
-
 
 <h1>Introduce el nombre del aeropuerto</h1>
 <form action="/informacion-de-los-aeropuertos" method="GET">

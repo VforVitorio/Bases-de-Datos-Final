@@ -3,9 +3,9 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import joinedload
 import pymysql
 
-pymysql.install_as_MySQLdb()
+
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:1234@localhost:3306/aviones'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:root@localhost:3306/aviones'
 db = SQLAlchemy(app)
 
 

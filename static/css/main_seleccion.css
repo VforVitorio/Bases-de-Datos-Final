@@ -13,6 +13,7 @@ h1 {
     padding: 10px;
     font-family: Arial;
     font-size: 40pt;
+    margin-top: -5px
 }
 p{
     font-family: Helvetica;
@@ -82,28 +83,50 @@ p {
 
 .error {
     color: white;
-    background-color: #FF4F58; /* Un rojo para los mensajes de error */
+    background-color: #FF4F58; 
     text-align: center;
     padding: 10px;
     margin: 20px;
 }
 
+
 .collapsible {
-    background-color: #333333;;
-    
+    background-color: #333333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: auto; /* Cambiado de 100% a auto */
+    width: auto; /* Cambiado de 200px a auto */
+}
+
+#collapsibleContent {
+    display: none; /* Añadido */
+    width: 100%; /* Añadido */
 }
 
 button.collapsible img {
-    width: 180px; /* Adjust as needed */
+    width: 80px; 
     height: auto;
 }
 
 .primerBloque {
     display: flex;
-    justify-content: space-between; /* Adjust as needed */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.enlaceSalidas img, .enlaceVuelo img, .diagrama img {
-    width: 350px; /* Adjust as needed */
+.primerBloque div {
+    margin: 80px 0; /* Añade un margen superior e inferior de 10px */
+}
+
+.enlaceSalidas img, .enlaceVuelo img {
+    width: 200px; 
+    height: auto;
+    margin-top: 15px;
+}
+
+.diagrama img {
+    width: 100px; /* Adjust as needed */
     height: auto;
 }

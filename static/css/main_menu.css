@@ -59,12 +59,18 @@ p{
   height: auto;
   margin-top: 80px;
   margin-bottom: 20px;
+ 
 }
 
 
-/*  Tamaño Imagenes */
-.avionDespegando img, .ticket img, .diagrama img {
+
+.avionDespegando img, .ticket img{
   width: 300px;
   height: auto;
   margin-top: 80px;
+}
+
+.diagrama img {
+  width: 250px; 
+  height: auto;
 }
