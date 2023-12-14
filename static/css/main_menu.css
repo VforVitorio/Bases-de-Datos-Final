@@ -20,16 +20,6 @@ p{
   font-family: Helvetica;
 }
 
-.collapsible {
-  background-color: #393e46;
-  cursor: pointer;
-  padding: 18px;
-  text-align: left;
-  border: none;
-  outline: none;
-  width: 100%;
-}
-
 /* Centrado imagenes cabecera */
 .encabezado, .primerBloque, .segundoBloque {
   display: flex;

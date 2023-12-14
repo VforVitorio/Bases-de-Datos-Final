@@ -2,16 +2,21 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1a2b4c; /* Un azul oscuro para el fondo */
+    background-color: #919EA9; /* Un azul oscuro para el fondo */
     color: #FFFFFF; /* Blanco para el texto */
 }
-
 h1 {
-    color: #FFFFFF; /* Blanco para los títulos */
+    color: white;
+    background-color: #333333;
     text-align: center;
-    padding: 20px 0;
+    font-size: 36px;
+    padding: 10px;
+    font-family: Arial;
+    font-size: 40pt;
 }
-
+p{
+    font-family: Helvetica;
+}
 form {
     display: flex;
     justify-content: center;
@@ -81,4 +86,24 @@ p {
     text-align: center;
     padding: 10px;
     margin: 20px;
+}
+
+.collapsible {
+    background-color: #333333;;
+    
+}
+
+button.collapsible img {
+    width: 180px; /* Adjust as needed */
+    height: auto;
+}
+
+.primerBloque {
+    display: flex;
+    justify-content: space-between; /* Adjust as needed */
+}
+
+.enlaceSalidas img, .enlaceVuelo img, .diagrama img {
+    width: 350px; /* Adjust as needed */
+    height: auto;
 }
