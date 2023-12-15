@@ -1,3 +1,5 @@
+# importamos librerias necesarias
+
 import random
 import time
 import mysql.connector
@@ -146,6 +148,8 @@ def create_flights_table(c):
     ''')
 
 
+#Creacion de un avión
+
 def get_random_flight(flightStatus, prop, route):
     randomAirport = random.choice(route['airports'])
     randomRoute = random.choice(randomAirport['routes'])
@@ -166,6 +170,7 @@ def get_random_flight(flightStatus, prop, route):
 
     return plane
 
+# Insetamos el avion creado en la base de datos creado cada 5 segundos
 
 def insert_flight_data(plane, c, conn):
     time.sleep(5)
@@ -214,4 +219,5 @@ def insert_flight_data(plane, c, conn):
 
     # Guardamos los cambios
     conn.commit()
+    # Cerramos la conexión
     conn.close()

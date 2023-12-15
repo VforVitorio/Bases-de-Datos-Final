@@ -1,7 +1,10 @@
-{% extends 'base_destinos.html' %} {% block head %}
+{% extends 'base_destinos.html' %} 
+{% block head %} 
 <title>Vuelos de aeropuertos</title>
-{% endblock %} {% block body %}
+{% endblock %} 
 
+{% block body %}
+<!--definimos un div para la funcion colapsable a modo de menú con sus fotos -->
 <div class="collapsible">
   <button class="collapsible" onclick="toggleCollapsible()">
     <img src="{{ url_for('static', filename='/imagenes/menu.png') }}" alt="">
@@ -12,24 +15,19 @@
           <a href="{{ url_for('ver_rutas_aerolineas') }}">
               <img src="{{ url_for('static', filename='/imagenes/departures.png') }}" alt="avionDespegando">
           </a>
-         
       </div>
       <div class="enlaceVuelo">
           <a href="{{ url_for('buscar_avion') }}">
               <img src="{{ url_for('static', filename='/imagenes/boardingPass.png') }}" alt="ticket">    
           </a>
-          
       </div>
       <div class="diagrama">
         <a href="{{ url_for('grafico') }}">
             <img src="{{ url_for('static', filename='/imagenes/grafo.png') }}" alt="ticket">    
         </a>
-        
+      </div>
     </div>
-    
   </div>
-</div>
-
   <script>
     function toggleCollapsible() {
       var content = document.getElementById("collapsibleContent");
@@ -42,7 +40,7 @@
   </script>
 </div>
 
-
+<!--definimos  la entrada de datos para las consultas-->
 <h1>Introduce el nombre del aeropuerto</h1>
 <form action="/informacion-de-los-aeropuertos" method="GET">
   <input type="text" name="aeropuerto" placeholder="Nombre del aeropuerto" />
@@ -70,4 +68,5 @@
   <p>RouteId: {{ id_ruta }}, Aerolínea: {{ aerolinea }}</p>
   {% endfor %}
 </ul>
-{% endif %} {% endblock %}
+{% endif %} 
+{% endblock %}
