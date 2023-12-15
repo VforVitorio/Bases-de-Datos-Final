@@ -127,6 +127,6 @@ button.collapsible img {
 }
 
 .diagrama img {
-    width: 100px; /* Adjust as needed */
-    height: auto;
+    width: auto; /* Adjust as needed */
+    height: 80px;
 }
