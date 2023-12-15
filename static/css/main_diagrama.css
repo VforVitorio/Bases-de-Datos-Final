@@ -1,0 +1,273 @@
+
+body {
+    background-color: #919EA9;
+}
+
+h1 {
+    color: white;
+    background-color: #333333;
+    text-align: center;
+    font-size: 36px;
+    padding: 10px;
+    font-family: Arial;
+    font-size: 40pt;
+}
+
+
+p {
+    font-family: Helvetica;
+}
+
+.Imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#collapsible {
+    background-color: #333333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: auto; /* Cambiado de 100% a auto */
+    width: auto; /* Cambiado de 200px a auto */
+}
+
+#collapsibleContent {
+    display: none; /* Añadido */
+    width: 100%; /* Añadido */
+}
+
+button.collapsible img {
+    width: 80px; 
+    height: auto;
+}
+
+/* Color de fondo */
+
+body {
+    background-color: #919EA9;
+  }
+  
+  /* Color títulos*/
+  h1 {
+    color: white;
+    background-color: #333333;
+    text-align: center;
+    font-size: 36px;
+    padding: 10px;
+    font-family: Arial;
+    font-size: 40pt;
+  }
+  
+  p{
+    font-family: Helvetica;
+  }
+  
+  /* Centrado imagenes cabecera */
+  .encabezado, .primerBloque, .segundoBloque {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Fondo de las imagenes */
+  .avionDespegando, .ticket {
+    width: 500px; 
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #F4F5F6; 
+    margin: 23pt;
+  }
+  
+  /* Fondo segunda imagen */
+  .diagrama {
+    width: 500px; 
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #F4F5F6; 
+    
+  }
+  
+  /* tamaño imagenes cabecera*/
+  
+  .encabezado img {
+    width: 100px;
+    height: auto;
+    margin-top: 80px;
+    margin-bottom: 20px;
+  }
+  
+  
+  /*  Tamaño Imagenes */
+  .avionDespegando img, .ticket img, .diagrama img {
+    width: 300px;
+    height: auto;
+    margin-top: 80px;
+  }
+
+
+
+.primerBloque {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.collapsible {
+  background-color: #333333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: auto; /* Cambiado de 100% a auto */
+  width: auto; /* Cambiado de 200px a auto */
+}
+
+#collapsibleContent {
+  display: none; /* Añadido */
+  width: 100%; /* Añadido */
+}
+button.collapsible img {
+  width: 80px; 
+  height: auto;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #919EA9; /* Un azul oscuro para el fondo */
+  color: #FFFFFF; /* Blanco para el texto */
+}
+h1 {
+  color: white;
+  background-color: #333333;
+  text-align: center;
+  font-size: 36px;
+  padding: 10px;
+  font-family: Arial;
+  font-size: 40pt;
+  margin-top: -5px
+}
+p{
+  font-family: Helvetica;
+}
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: #3a5f7d; /* Un azul medio para el formulario de búsqueda */
+  padding: 20px;
+  border-radius: 4px;
+}
+
+form input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+form button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #FFFFFF; /* Blanco para los botones */
+  color: #1a2b4c; /* Azul oscuro para el texto de los botones */
+  cursor: pointer;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+form button:hover {
+  background-color: #cccccc; /* Gris claro para el hover de los botones */
+}
+
+.styled-div {
+  width: 60%;
+  margin: 0 auto;
+  background-color: #3a5f7d; /* Un azul medio para los resultados de búsqueda */
+  color: white;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+p {
+  color: white;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+.error {
+  color: white;
+  background-color: #FF4F58; 
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+}
+
+
+.collapsible {
+  background-color: #333333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: auto; /* Cambiado de 100% a auto */
+  width: auto; /* Cambiado de 200px a auto */
+}
+
+#collapsibleContent {
+  display: none; /* Añadido */
+  width: 100%; /* Añadido */
+}
+
+button.collapsible img {
+  width: 80px; 
+  height: auto;
+}
+
+.primerBloque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.primerBloque div {
+  margin: 80px 0; /* Añade un margen superior e inferior de 10px */
+}
+
+.enlaceSalidas img, .enlaceVuelo img {
+  width: 200px; 
+  height: auto;
+  margin-top: 15px;
+}
+
+.diagrama img {
+  width: auto; /* Adjust as needed */
+  height: 80px;
+}

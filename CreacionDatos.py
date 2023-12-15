@@ -8,7 +8,7 @@ def create_database_connection():
     conn = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="root",
+        password="1234",
         database="aviones"
     )
     c = conn.cursor()
