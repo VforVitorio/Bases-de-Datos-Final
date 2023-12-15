@@ -5,6 +5,11 @@
 
 {% block body%}
 
+<h1>Diagrama Entidad Relacion</h1>
+
+<div class="Imagen">
+    <img src="{{ url_for('static', filename='/imagenes/esquemaER.png') }}" alt="avionDespegando">
+</div>
 
 <div class="collapsible">
   <button class="collapsible" onclick="toggleCollapsible()">
@@ -33,17 +38,17 @@
     
   </div>
 </div>
-  
-  <h1>Diagrama Entidad Relacion</h1>
+<script>
+  function toggleCollapsible() {
+    var content = document.getElementById("collapsibleContent");
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  }
+</script>
 
-  <div class = "Imagen">
-
-      <img src="{{ url_for('static', filename='/imagenes/esquemaER.png') }}" alt="avionDespegando">
-     
-  </div>
-
-
- 
 {% endblock %}
 </body>
 </html>
