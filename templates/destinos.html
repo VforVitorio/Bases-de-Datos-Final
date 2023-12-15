@@ -1,10 +1,6 @@
-<!--Llamada al archivo base_destino -->
-<!--Al usar flak como "servidor" de nuestra web, necesitamos especificar las diferentes con los bloques{% extends 'base_destinos.html' %} {% block head %} -->
-
 {% extends 'base_destinos.html' %} {% block head %}
 <title>Vuelos de aeropuertos</title>
 {% endblock %} {% block body %}
-
 <!--definimos un div para la funcion colapsable a modo de menú con sus fotos -->
 <div class="collapsible">
   <button class="collapsible" onclick="toggleCollapsible()">
@@ -38,7 +34,6 @@
       </div>
     </div>
   </div>
-
   <script>
     function toggleCollapsible() {
       var content = document.getElementById("collapsibleContent");
