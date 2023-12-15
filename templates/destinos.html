@@ -1,11 +1,9 @@
-
-<!--Llamada al archivo base_destino -->
-<!--Al usar flak como "servidor" de nuestra web, necesitamos especificar las diferentes con los bloques{% extends 'base_destinos.html' %} {% block head %} -->
-
-{% extends 'base_destinos.html' %} {% block head %} 
+{% extends 'base_destinos.html' %} 
+{% block head %} 
 <title>Vuelos de aeropuertos</title>
-{% endblock %} {% block body %}
+{% endblock %} 
 
+{% block body %}
 <!--definimos un div para la funcion colapsable a modo de menú con sus fotos -->
 <div class="collapsible">
   <button class="collapsible" onclick="toggleCollapsible()">
@@ -14,20 +12,14 @@
   <div class="content" id="collapsibleContent">
     <div class="primerBloque">
       <div class="enlaceSalidas">
-        <a href="{{ url_for('ver_rutas_aerolineas') }}">
-          <img
-            src="{{ url_for('static', filename='/imagenes/departures.png') }}"
-            alt="avionDespegando"
-          />
-        </a>
+          <a href="{{ url_for('ver_rutas_aerolineas') }}">
+              <img src="{{ url_for('static', filename='/imagenes/departures.png') }}" alt="avionDespegando">
+          </a>
       </div>
       <div class="enlaceVuelo">
-        <a href="{{ url_for('buscar_avion') }}">
-          <img
-            src="{{ url_for('static', filename='/imagenes/boardingPass.png') }}"
-            alt="ticket"
-          />
-        </a>
+          <a href="{{ url_for('buscar_avion') }}">
+              <img src="{{ url_for('static', filename='/imagenes/boardingPass.png') }}" alt="ticket">    
+          </a>
       </div>
       <div class="diagrama">
         <a href="{{ url_for('grafico') }}">
@@ -39,7 +31,6 @@
       </div>
     </div>
   </div>
-
   <script>
     function toggleCollapsible() {
       var content = document.getElementById("collapsibleContent");
@@ -82,4 +73,5 @@
   <p>RouteId: {{ id_ruta }}, Aerolínea: {{ aerolinea }}</p>
   {% endfor %}
 </ul>
-{% endif %} {% endblock %}
+{% endif %} 
+{% endblock %}
