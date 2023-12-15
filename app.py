@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, redirect, url_for
+
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import joinedload
 import pymysql
@@ -149,8 +150,21 @@ def borrar_aerolineas():
 
 @app.route('/grafico')
 def grafico():
-    return render_template('base_diagrama.html')
+    return render_template('diagrama.html')
 
+
+
+@app.route('/dataGraph')
+def get_graph():
+    flights_with_departures = Flights.query.options(joinedload(Flights.departure)).all()
+    flights_with_destinations = Flights.query.options(joinedload(Flights.destination)).all()
+
+    nodes = [{'name': flight.departure.departure_code, 'group': 1} for flight in flights_with_departures]  # Iterate over all flights
+    links = [{'source': flight.departure.departure_code, 'target': flight.destination.destination} for flight in flights_with_destinations]
+
+    graph = {'nodes': nodes, 'links': links}  
+
+    return jsonify(graph)
 
 if __name__ == "__main__":
     with app.app_context():
