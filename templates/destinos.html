@@ -9,6 +9,7 @@
   <div class="content" id="collapsibleContent">
     <div class="primerBloque">
       <div class="enlaceSalidas">
+<<<<<<< HEAD
         <a href="{{ url_for('ver_rutas_aerolineas') }}">
           <img
             src="{{ url_for('static', filename='/imagenes/departures.png') }}"
@@ -23,6 +24,16 @@
             alt="ticket"
           />
         </a>
+=======
+          <a href="{{ url_for('ver_rutas_aerolineas') }}">
+              <img src="{{ url_for('static', filename='/imagenes/departures.png') }}" alt="avionDespegando">
+          </a>
+      </div>
+      <div class="enlaceVuelo">
+          <a href="{{ url_for('buscar_avion') }}">
+              <img src="{{ url_for('static', filename='/imagenes/boardingPass.png') }}" alt="ticket">    
+          </a>
+>>>>>>> main
       </div>
       <div class="diagrama">
         <a href="{{ url_for('grafico') }}">
